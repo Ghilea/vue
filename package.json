@@ -1,0 +1,28 @@
+{
+    "name": "restaurangmenyn",
+    "devDependencies": {
+        "sass": "^1.51.0",
+        "nodemon": "^2.0.16",
+        "npm-run-all": "^4.1.5",
+        "copyfiles": "^2.4.1"
+    },
+    "scripts": {
+        "watch": "nodemon --exec \"npm run build\"",
+        "build:sass": "sass --no-source-map ./src/sass:./public/css",
+        "copy:assets": "copyfiles -u 1 ./src/assets/**/* ./public",
+        "copy:index": "copyfiles -u 1 ./src/index.html ./public",
+        "copy": "npm-run-all --parallel copy:*",
+        "build": "npm-run-all copy build:*"
+    },
+    "nodemonConfig": {
+        "watch": [
+            "./src/*"
+        ],
+        "ext": "js,scss,html",
+        "ignore": [
+            "public/*"
+        ],
+        "delay": 2500
+    }
+
+}
