@@ -24,7 +24,7 @@
 
     <main id="app">
         <header>
-            <h1>Meny</h1>
+            <h1>{{title}}</h1>
             <p v-if="guest !== 'Barn'">{{ guest }}</p>
             <p class="child" v-else>{{ guest }}</p>
 
@@ -32,7 +32,7 @@
         
         <div class="container">
             <div class="menu_left">
-                <h2>Tilltugg & smårätter</h2>
+                <h2>{{menu.first}}</h2>
                 <article>
                     <h3>Friterad kycklingsnacks med chilibearnaise
                         <span>85:-</span>
@@ -42,7 +42,7 @@
                 </article>
             </div>
             <div class="menu_right">
-                <h2>Förrätter</h2>
+                <h2>{{menu.second}}</h2>
                 <article>
                     <h3>Husets toast skagen
                         <span>119:-</span>
