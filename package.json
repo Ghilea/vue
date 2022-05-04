@@ -1,5 +1,9 @@
 {
     "name": "restaurangmenyn",
+    "config": {
+        "address": "./src/",
+        "output": "./public"
+    },
     "devDependencies": {
         "sass": "^1.51.0",
         "nodemon": "^2.0.16",
@@ -8,9 +12,10 @@
     },
     "scripts": {
         "watch": "nodemon --exec \"npm run build\"",
-        "build:sass": "sass --no-source-map ./src/sass:./public/css",
-        "copy:assets": "copyfiles -u 1 ./src/assets/**/* ./public",
-        "copy:index": "copyfiles -u 1 ./src/index.html ./public",
+        "build:sass": "sass --no-source-map %npm_package_config_address%sass:%npm_package_config_output%/css",
+        "copy:assets": "copyfiles -u 1 %npm_package_config_address%assets/**/* %npm_package_config_output%",
+        "copy:vue": "copyfiles -u 1 %npm_package_config_address%vue/**/* %npm_package_config_output%",
+        "copy:index": "copyfiles -u 1 %npm_package_config_address%index.html %npm_package_config_output%",
         "copy": "npm-run-all --parallel copy:*",
         "build": "npm-run-all copy build:*"
     },
