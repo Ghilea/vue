@@ -22,11 +22,12 @@
         <input type="submit">
     </header>
 
-    <main id="app">{{ message }}
+    <main id="app">
         <header>
             <h1>Meny</h1>
-            <p>Vuxen</p>
-            
+            <p v-if="guest !== 'Barn'">{{ guest }}</p>
+            <p class="child" v-else>{{ guest }}</p>
+
         </header>
         
         <div class="container">
@@ -54,10 +55,21 @@
     </main>
 
     <footer>
-        <ul>
-            <li>Telefonnummer: 056-4054050</li>
-            <li>Adress: Klarabergsvägen 24, 653 78 Stockholm</li>
-        </ul>
+        <section>
+            <h2>Kontakt</h2>
+            <ul>
+                <li>Telefonnummer: 056-4054050</li>
+                <li>Adress: Klarabergsvägen 24, 653 78 Stockholm</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Öppettider</h2>
+            <ul>
+                <li>Telefonnummer: 056-4054050</li>
+                <li>Adress: Klarabergsvägen 24, 653 78 Stockholm</li>
+            </ul>
+        </section>
     </footer>
     <script src="https://unpkg.com/vue@3"></script>
     <script src="./vue/app.js"></script>

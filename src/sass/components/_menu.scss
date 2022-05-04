@@ -1,4 +1,6 @@
 main {
+    margin: 5em 0 15em 0;
+
     header {
         position: relative;
         margin-top: 1em;
@@ -24,6 +26,7 @@ main {
 
         .child {
             transform: translate(1em, 0.3em) rotate(-20deg);
+            color: hotpink;
         }
     }
 

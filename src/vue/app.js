@@ -1,7 +1,7 @@
 Vue.createApp({
     data() {
         return {
-            message: 'Hello Vue!'
+            guest: 'Barn'
         }
     }
 }).mount('#app')

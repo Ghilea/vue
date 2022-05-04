@@ -4,8 +4,14 @@ body {
   background-color: rgb(255, 255, 255);
   font-size: 1rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+main {
+  margin: 5em 0 15em 0;
+}
 main header {
   position: relative;
   margin-top: 1em;
@@ -29,6 +35,7 @@ main header p {
 }
 main header .child {
   transform: translate(1em, 0.3em) rotate(-20deg);
+  color: hotpink;
 }
 main .container {
   display: flex;
@@ -65,4 +72,31 @@ main .container .menu_left {
 }
 main .container .menu_right {
   width: 50%;
+}
+
+footer {
+  width: 100vw;
+  height: 15em;
+  display: flex;
+  background-color: #222;
+  color: #858585;
+  margin-top: auto;
+  justify-content: space-evenly;
+}
+footer section {
+  margin: 2em 0;
+}
+footer section h2 {
+  color: #fff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5em;
+}
+footer section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+footer section ul li {
+  margin: 1em 0;
 }
