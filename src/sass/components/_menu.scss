@@ -34,6 +34,9 @@ main {
         display: flex;
         gap: 2em;
         margin: 1em 5em;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
 
         h2 {
             font-size: 1.8rem;
@@ -45,6 +48,7 @@ main {
 
         article {
             position: relative;
+            margin: 2em 0 5em 0;
 
             h3 {
                 display: flex;
@@ -66,11 +70,15 @@ main {
         }
 
         .menu_left {
-            width: 50%;
+            width: 100%;
         }
 
         .menu_right {
-            width: 50%;
+            width: 100%;
+        }
+
+        .menu_middle {
+            width: 100%;
         }
     }
 }

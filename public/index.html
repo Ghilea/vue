@@ -25,30 +25,40 @@
     <main id="app">
         <header>
             <h1>{{title}}</h1>
-            <p v-if="guest !== 'Barn'">{{ guest }}</p>
+            <p v-if="guest !== 'barn'">{{ guest }}</p>
             <p class="child" v-else>{{ guest }}</p>
 
         </header>
         
         <div class="container">
             <div class="menu_left">
-                <h2>{{menu.first}}</h2>
-                <article>
-                    <h3>Friterad kycklingsnacks med chilibearnaise
-                        <span>85:-</span>
+                <h2>{{menu.first.title}}</h2>
+                <article v-for="value in menu.first.dish">
+                    <h3>{{value.name}}
+                        <span>{{value.price}}:-</span>
                     </h3>
                     <div class="dotted"></div>
-                    <p>Deep fried chiken with chilibearnaise</p>
+                    <p>{{value.describe}}</p>
                 </article>
             </div>
             <div class="menu_right">
-                <h2>{{menu.second}}</h2>
-                <article>
-                    <h3>Husets toast skagen
-                        <span>119:-</span>
+                <h2>{{menu.second.title}}</h2>
+                <article v-for="value in menu.second.dish">
+                    <h3>{{value.name}}
+                        <span>{{value.price}}:-</span>
                     </h3>
                     <div class="dotted"></div>
-                    <p>Smörstekt surdegsbröd med räckor, kräftsjärtar, majonnäs, dill & citron toppad med löjrom</p>
+                    <p>{{value.describe}}</p>
+                </article>
+            </div>
+            <div class="menu_middle">
+                <h2>{{menu.third.title}}</h2>
+                <article v-for="value in menu.third.dish">
+                    <h3>{{value.name}}
+                        <span>{{value.price}}:-</span>
+                    </h3>
+                    <div class="dotted"></div>
+                    <p>{{value.describe}}</p>
                 </article>
             </div>
         </div>
@@ -57,18 +67,19 @@
     <footer>
         <section>
             <h2>Kontakt</h2>
-            <ul>
-                <li>Telefonnummer: 056-4054050</li>
-                <li>Adress: Klarabergsvägen 24, 653 78 Stockholm</li>
-            </ul>
+            <p>Klarabergsvägen 24, 653 78 Stockholm</p>
+            <p>056-4054050</p>
+            <p>blabla@blabla.se</p>
+                
+      
         </section>
         
         <section>
             <h2>Öppettider</h2>
-            <ul>
-                <li>Telefonnummer: 056-4054050</li>
-                <li>Adress: Klarabergsvägen 24, 653 78 Stockholm</li>
-            </ul>
+            <p>Måndag, Tisdag, Onsdag, Torsdag 16.00 - 22.30</p>
+            <p>Fredag 15.00 - 23.00</p>
+            <p>Lördag 13.00 - 23.00</p>
+            <p>Söndag 13.00 - 22.00</p>
         </section>
     </footer>
     <script src="https://unpkg.com/vue@3"></script>

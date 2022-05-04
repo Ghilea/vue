@@ -41,6 +41,9 @@ main .container {
   display: flex;
   gap: 2em;
   margin: 1em 5em;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }
 main .container h2 {
   font-size: 1.8rem;
@@ -51,6 +54,7 @@ main .container h2 {
 }
 main .container article {
   position: relative;
+  margin: 2em 0 5em 0;
 }
 main .container article h3 {
   display: flex;
@@ -68,10 +72,13 @@ main .container article p {
   font-size: 1rem;
 }
 main .container .menu_left {
-  width: 50%;
+  width: 100%;
 }
 main .container .menu_right {
-  width: 50%;
+  width: 100%;
+}
+main .container .menu_middle {
+  width: 100%;
 }
 
 footer {
@@ -84,7 +91,7 @@ footer {
   justify-content: space-evenly;
 }
 footer section {
-  margin: 2em 0;
+  margin: 2em 0 5em 0;
 }
 footer section h2 {
   color: #fff;
