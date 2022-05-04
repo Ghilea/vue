@@ -1,3 +1,68 @@
 body {
-  background-color: beige;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+main header {
+  position: relative;
+  margin-top: 1em;
+}
+main header h1 {
+  color: #1e73be;
+  letter-spacing: 0em;
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 0.1em;
+  font-family: "Open Sans", sans-serif;
+}
+main header p {
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  font-size: 3rem;
+  transform: translate(-50%, -1.5em);
+}
+main header .child {
+  transform: translate(1em, 0.3em) rotate(-20deg);
+}
+main .container {
+  display: flex;
+  gap: 2em;
+  margin: 1em 5em;
+}
+main .container h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+main .container article {
+  position: relative;
+}
+main .container article h3 {
+  display: flex;
+  justify-content: space-between;
+  color: #2f2f2f;
+  font-weight: 400;
+  font-size: 1rem;
+}
+main .container article .dotted {
+  border-bottom: 1px dashed #000;
+}
+main .container article p {
+  color: #636363;
+  font-weight: 400;
+  font-size: 1rem;
+}
+main .container .menu_left {
+  width: 50%;
+}
+main .container .menu_right {
+  width: 50%;
 }
