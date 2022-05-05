@@ -27,12 +27,21 @@
             <p class="child" v-else>{{menu_selected}}</p>
 
             <div class="menu_navbar">
-                <select v-on:change="changeGuest($event.target.value)" v-model="menu_selected">
-                    <option v-for="value in navbar.menu">{{value.title}}</option>
-                </select>
-                <select v-on:change="changePrice($event.target.value)" v-model="menu_selected_price">
-                    <option v-for="value in navbar.option">{{value.title}}</option>
-                </select>
+                <div class="flex">
+                    <label for="choose_menu">Meny</label>
+                    <select id="choose_menu" v-on:change="changeGuest($event.target.value)" v-model="menu_selected">
+                        <option v-for="value in navbar.menu">{{value.title}}</option>
+                    </select>
+                </div>
+                
+                <div class="flex">
+                    <label for="choose_price">Prisklass</label>
+                    <select id="choose_price" v-on:change="changePrice($event.target.value)"
+                        v-model="menu_selected_price">
+                        <option v-for="value in navbar.option">{{value.title}}</option>
+                    </select>
+                </div>
+                
             </div>
 
         </header>

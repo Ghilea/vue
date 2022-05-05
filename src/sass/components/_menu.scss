@@ -36,9 +36,15 @@ main {
             margin-left: 5em;
             gap: 1em;
 
-            select {
-                width: 8em;
-                text-transform: capitalize;
+            .flex {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+    
+                select {
+                    width: 8em;
+                    text-transform: capitalize;
+                }
             }
         }
     }

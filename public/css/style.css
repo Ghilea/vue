@@ -44,7 +44,12 @@ main header .menu_navbar {
   margin-left: 5em;
   gap: 1em;
 }
-main header .menu_navbar select {
+main header .menu_navbar .flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main header .menu_navbar .flex select {
   width: 8em;
   text-transform: capitalize;
 }
