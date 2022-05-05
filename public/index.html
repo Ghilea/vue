@@ -30,7 +30,7 @@
                 <select v-on:change="changeGuest($event.target.value)" v-model="menu_selected">
                     <option v-for="value in navbar.menu">{{value.title}}</option>
                 </select>
-                <select>
+                <select v-on:change="changePrice($event.target.value)" v-model="menu_selected_price">
                     <option v-for="value in navbar.option">{{value.title}}</option>
                 </select>
             </div>

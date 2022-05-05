@@ -285,9 +285,14 @@ Vue.createApp({
             ]
 
             this.menu = (this.menu_selected === 'barn') ? childrenMenu : (this.menu_selected === 'vuxen') ? adultMenu : (this.menu_selected === 'par') ? coupleMenu : ''
+        },
+        changePrice(price){
+            console.log(price)
+            this.menu_selected_price = price
         }
     },
     beforeMount() {
-        this.changeGuest('vuxen')
+        this.changeGuest('vuxen');
+        this.changePrice('allt')
     },
 }).mount('#app')
