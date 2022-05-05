@@ -81,6 +81,40 @@ main .container .menu_middle {
   width: 100%;
 }
 
+.navbar {
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.navbar ul li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+.navbar ul li:last-child {
+  border-right: none;
+}
+.navbar ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar ul li a:hover:not(.active) {
+  background-color: #111;
+}
+.navbar ul li .active {
+  background-color: #1e73be;
+}
+
 footer {
   width: 100vw;
   height: 15em;

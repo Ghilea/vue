@@ -12,14 +12,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h2>Totalsumma</h2>
+    <header class="navbar">
+        <ul>
+            <li><a class="active" href="#first">Förrätter</a></li>
+            <li><a href="#second">Varmrätter</a></li>
+            <li><a href="#third">Desert</a></li>
+        </ul>
+        <div>Totalsumma</div>
         <select>
             <option>Barnmeny</option>
             <option>Vuxenmeny</option>
             <option>Parmeny</option>
         </select>
-        <input type="submit">
     </header>
 
     <main id="app">
@@ -31,7 +35,7 @@
         </header>
         
         <div class="container">
-            <div class="menu_left">
+            <div id="first" class="menu_left">
                 <h2>{{menu.first.title}}</h2>
                 <article v-for="value in menu.first.dish">
                     <h3>{{value.name}}
@@ -41,7 +45,7 @@
                     <p>{{value.describe}}</p>
                 </article>
             </div>
-            <div class="menu_right">
+            <div id="second" class="menu_right">
                 <h2>{{menu.second.title}}</h2>
                 <article v-for="value in menu.second.dish">
                     <h3>{{value.name}}
@@ -51,7 +55,7 @@
                     <p>{{value.describe}}</p>
                 </article>
             </div>
-            <div class="menu_middle">
+            <div id="third" class="menu_middle">
                 <h2>{{menu.third.title}}</h2>
                 <article v-for="value in menu.third.dish">
                     <h3>{{value.name}}
