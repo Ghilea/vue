@@ -69,23 +69,59 @@ main .container h2 {
   margin-bottom: 2em;
 }
 main .container article {
+  display: flex;
+  flex-direction: column;
   position: relative;
   margin: 2em 0 5em 0;
 }
-main .container article h3 {
+main .container article .flex_title {
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+main .container article .flex_title:hover {
+  cursor: pointer;
+}
+main .container article .flex_title:hover h3 {
+  color: #1e73be;
+  transition: all 0.8s;
+}
+main .container article .flex_title:hover p {
+  color: #1e73be;
+  transition: all 0.8s;
+}
+main .container article .flex_title:hover aside {
+  color: #1e73be;
+  transition: all 0.8s;
+}
+main .container article .flex_title:hover .dotted_top {
+  border-color: #1e73be;
+  transition: all 0.8s;
+}
+main .container article .flex_title .dotted_top {
+  position: absolute;
+  top: 25px;
+  width: 100%;
+  border-bottom: 1px dashed #000;
+  z-index: -1;
+}
+main .container article h3 {
   color: #2f2f2f;
   font-weight: 400;
   font-size: 1rem;
-}
-main .container article .dotted {
-  border-bottom: 1px dashed #000;
+  background-color: white;
+  width: fit-content;
+  padding-right: 0.5em;
 }
 main .container article p {
   color: #636363;
   font-weight: 400;
   font-size: 1rem;
+  background-color: white;
+  width: fit-content;
+}
+main .container article .menu_price {
+  padding-left: 0.5em;
 }
 main .container .menu_left {
   width: 100%;

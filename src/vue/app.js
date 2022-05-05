@@ -55,17 +55,20 @@ const adultMenu = [{
         dish: [{
                 name: 'Friterad kycklingsnacks med chilibearnaise',
                 describe: '',
-                price: 85
+                price: 85,
+                aside: 0
             },
             {
                 name: 'Husets toast skagen',
                 describe: 'Smörstekt surdegsbröd med räckor, kräftsjärtar, majonnäs, dill & citron toppad med löjrom',
-                price: 119
+                price: 119,
+                aside: 1
             },
             {
                 name: 'Chèvre chaud',
                 describe: 'Smörstekt surdegsbröd med chèvre, rödbetor, honung & valnötter',
-                price: 115
+                price: 115,
+                aside: 0
             },
             {
                 name: 'Skogssvampsoppa',
@@ -337,6 +340,9 @@ Vue.createApp({
                     break;
             }
 
+        },
+        addDish(id, disgId){
+            console.log(id, disgId);
         }
     },
     beforeMount() {

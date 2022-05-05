@@ -49,16 +49,25 @@
         <section class="container">
 
             <!-- section dishes -->
-            <section v-for="item in menu" class="menu_left">
+            <section v-for="(item, itemIndex) in menu" class="menu_left">
                 <h2>{{item.title}}</h2>
-                <article v-for="dish in item.dish">
-                    <h3>{{dish.name}}
-                        <span>{{dish.price}}:-</span>
-                    </h3>
-                    <div class="dotted"></div>
-                    <p>{{dish.describe}}</p>
+                <article v-for="(dish, dishIndex) in item.dish">
+                    <div class="flex_title" v-on:click="addDish(itemIndex, dishIndex)">
+                        <div class=" dotted_top"></div>
+                        <div>
+                            <h3>{{dish.name}}</h3>
+                            <p>{{dish.describe}}</p>
+                        </div>
+                        
+                        <div>
+                            <p class="menu_price">{{dish.price}}:-</p>
+                            <aside v-if="dish.aside > 0">1 st</aside>
+                        </div>
+                    </div>
+   
                 </article>
             </section>
+            
 
         </section>
     </main>
