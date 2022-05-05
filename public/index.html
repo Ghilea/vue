@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- section header / navbar -->
     <header class="navbar">
         <ul>
             <li><a class="active" href="#first">Förrätter</a></li>
@@ -19,23 +20,31 @@
             <li><a href="#third">Desert</a></li>
         </ul>
         <div>Totalsumma</div>
-        <select>
-            <option>Barnmeny</option>
-            <option>Vuxenmeny</option>
-            <option>Parmeny</option>
-        </select>
     </header>
 
     <main id="app">
+        <!-- header for menu -->
         <header>
             <h1>{{title}}</h1>
             <p v-if="guest !== 'barn'">{{ guest }}</p>
             <p class="child" v-else>{{ guest }}</p>
-
+            <div class="menu_navbar">
+                <select>
+                    <option>Barnmeny</option>
+                    <option>Vuxenmeny</option>
+                    <option>Parmeny</option>
+                </select>
+                <select>
+                    <option>Billigt</option>
+                    <option>Allt</option>
+                </select>
+            </div>
         </header>
         
-        <div class="container">
-            <div id="first" class="menu_left">
+        <section class="container">
+
+            <!-- section förrätt -->
+            <section id="first" class="menu_left">
                 <h2>{{menu.first.title}}</h2>
                 <article v-for="value in menu.first.dish">
                     <h3>{{value.name}}
@@ -44,8 +53,10 @@
                     <div class="dotted"></div>
                     <p>{{value.describe}}</p>
                 </article>
-            </div>
-            <div id="second" class="menu_right">
+            </section>
+
+            <!-- section varmrätt -->
+            <section id="second" class="menu_right">
                 <h2>{{menu.second.title}}</h2>
                 <article v-for="value in menu.second.dish">
                     <h3>{{value.name}}
@@ -54,8 +65,10 @@
                     <div class="dotted"></div>
                     <p>{{value.describe}}</p>
                 </article>
-            </div>
-            <div id="third" class="menu_middle">
+            </section>
+
+            <!-- section desert -->
+            <section id="third" class="menu_middle">
                 <h2>{{menu.third.title}}</h2>
                 <article v-for="value in menu.third.dish">
                     <h3>{{value.name}}
@@ -64,10 +77,12 @@
                     <div class="dotted"></div>
                     <p>{{value.describe}}</p>
                 </article>
-            </div>
+            </section>
+
         </div>
     </main>
 
+    <!-- section footer -->
     <footer>
         <section>
             <h2>Kontakt</h2>
@@ -86,6 +101,7 @@
             <p>Söndag 13.00 - 22.00</p>
         </section>
     </footer>
+
     <script src="https://unpkg.com/vue@3"></script>
     <script src="./vue/app.js"></script>
 </body>

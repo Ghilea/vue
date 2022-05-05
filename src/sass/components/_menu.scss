@@ -3,7 +3,7 @@ main {
 
     header {
         position: relative;
-        margin-top: 1em;
+        margin: 1em 0;
 
         h1 {
             color: #1e73be;
@@ -27,6 +27,18 @@ main {
         .child {
             transform: translate(1em, 0.3em) rotate(-20deg);
             color: hotpink;
+        }
+
+        .menu_navbar {
+            display: flex;
+            height: 3em;
+            width: fit-content;
+            margin-left: 5em;
+            gap: 1em;
+
+            select {
+                width: 8em;
+            }
         }
     }
 

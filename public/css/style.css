@@ -14,7 +14,7 @@ main {
 }
 main header {
   position: relative;
-  margin-top: 1em;
+  margin: 1em 0;
 }
 main header h1 {
   color: #1e73be;
@@ -36,6 +36,16 @@ main header p {
 main header .child {
   transform: translate(1em, 0.3em) rotate(-20deg);
   color: hotpink;
+}
+main header .menu_navbar {
+  display: flex;
+  height: 3em;
+  width: fit-content;
+  margin-left: 5em;
+  gap: 1em;
+}
+main header .menu_navbar select {
+  width: 8em;
 }
 main .container {
   display: flex;
