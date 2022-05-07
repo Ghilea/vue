@@ -1,27 +1,6 @@
-import { withModifiers } from "vue";
-import { adultMenu, childrenMenu, coupleMenu } from "../data";
+import { store } from '../store';
 
-const cheapPrices = (data) => {
-    let newArray = [];
-
-    data.map((item) => {
-        let newItem = item.dish.filter((dishes) => {
-            return dishes.price < 150
-        })
-
-        if (newItem.length > 0) {
-            newArray.push({
-                title: item.title,
-                dish: newItem
-            });
-        }
-
-    })
-
-    return newArray;
-}
-
-export const Dish_header = {
+export default {
     
     data(){
         return {
@@ -44,52 +23,53 @@ export const Dish_header = {
                             title: 'allt'
                         }
                     ]
-                },
-                menu_selected: null,
-                menu_selected_price: null,
-                menu: []
+                }
         }
     },
     methods: {
         changeGuest(menu) {
-            this.menu_selected = menu;
-
-            switch (this.menu_selected) {
-                case 'barn':
-                    this.menu = childrenMenu;
-                    break;
-                case 'vuxen':
-                    this.menu = adultMenu;
-                    break;
-                case 'par':
-                    this.menu = coupleMenu;
-                    break;
-                default:
-                    this.menu = '';
-                    break;
-            }
+            store.state.menu_selected = menu;
         },
         changePrice(price) {
-            this.menu_selected_price = price;
+            store.state.menu_selected_price = price;
 
-            switch (this.menu_selected) {
+            switch (store.state.menu_selected) {
                 case 'barn':
                     (price === 'billigt') ?
-                    this.menu = cheapPrices(childrenMenu):
-                        this.menu = childrenMenu
+                    store.state.menu = this.cheapPrices(store.state.childrenMenu):
+                        store.state.menu = store.state.childrenMenu
                     break;
                 case 'vuxen':
                     (price === 'billigt') ?
-                    this.menu = cheapPrices(adultMenu):
-                        this.menu = adultMenu
+                    store.state.menu = this.cheapPrices(store.state.adultMenu):
+                        store.state.menu = store.state.adultMenu
                     break;
                 case 'par':
                     (price === 'billigt') ?
-                    this.menu = cheapPrices(coupleMenu):
-                        this.menu = coupleMenu
+                    store.state.menu = this.cheapPrices(coupleMenu):
+                        store.state.menu = store.state.coupleMenu
                     break;
             }
 
+        },
+        cheapPrices(data) {
+            let newArray = [];
+
+            data.map((item) => {
+                let newItem = item.dish.filter((dishes) => {
+                    return dishes.price < 150
+                })
+
+                if (newItem.length > 0) {
+                    newArray.push({
+                        title: item.title,
+                        dish: newItem
+                    });
+                }
+
+            })
+
+            return newArray;
         },
         addDish(id, disgId) {
             console.log(id, disgId);
@@ -108,53 +88,21 @@ export const Dish_header = {
             return <option>{item.title}</option>
         });
 
-        const showDishMenu = this.menu.map((item, index) => {
-            return (
-                <section class="menu_left">
-                    <h2>{item.title}</h2>
-                    {
-                        item.dish.map((dish, dishIndex) => {
-                            return (
-                                <article onClick={() => this.addDish(index, dishIndex)}>
-                                    
-                                    <div class = "flex_title">
-                                        <div class="dotted_top"></div>
-                                        <div>
-                                            <h3>{dish.name}</h3>
-                                            <p>{dish.describe}</p>
-                                        </div>
-                                        
-                                        <div>
-                                            <p class="menu_price">{dish.price}:-</p>
-                                            <aside v-show={dish.aside > 0}>1 st</aside>
-                                        </div>
-                                    </div>
-                
-                                </article>
-                            )
-                        })
-                    }
-                </section>
-            )
-        })
-
         return (
         <>
             <header>
                 <h1>{this.title}</h1> 
-                <p class="child" v-show={this.menu_selected === 'barn'}>{this.menu_selected}</p>
-                <p class="heart" v-show={this.menu_selected === 'couple'}>{this.menu_selected}</p>
-                <p v-show={this.menu_selected === 'vuxen'}>{this.menu_selected}</p>
-
+                <p class={(store.state.menu_selected === 'barn') ? 'child' : (store.state.menu_selected === 'couple') ? 'couple' : ''}>{store.state.menu_selected}</p>
+                
                 <div class="menu_navbar">
                     <div class="flex">
                         <label for="choose_menu">Meny</label>
                         <select id = "choose_menu"
                         v-model = {
-                            this.menu_selected
+                            store.state.menu_selected
                         }
                         onChange = {
-                            this.changeGuest(this.menu_selected)
+                            this.changeGuest(store.state.menu_selected)
                         } >
                             {chooseMenu}
                         </select>
@@ -164,10 +112,10 @@ export const Dish_header = {
                         <label for="choose_price">Prisklass</label>
                         <select id = "choose_price"
                         v-model = {
-                            this.menu_selected_price
+                            store.state.menu_selected_price
                         }
                         onChange = {
-                            this.changePrice(this.menu_selected_price)
+                            this.changePrice(store.state.menu_selected_price)
                         } >
                             {choosePrice}
                         </select>
@@ -175,8 +123,6 @@ export const Dish_header = {
                     
                 </div>
             </header>
-
-            <div class="container">{showDishMenu}</div>
         </>
         )
     }

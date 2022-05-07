@@ -29,7 +29,8 @@
         "babel-loader": "^8.2.5",
         "babel-plugin-transform-vue-jsx": "3.7.0",
         "babel-plugin-syntax-jsx": "6.18.0",
-        "@vue/babel-plugin-jsx": "1.1.1"
+        "@vue/babel-plugin-jsx": "1.1.1",
+        "vuex": "4.0.2"
     },
     "scripts": {
         "watch": "nodemon --exec \"npm run build\"",
