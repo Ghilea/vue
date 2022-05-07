@@ -37,6 +37,32 @@ main header .child {
   transform: translate(1em, 0.3em) rotate(-20deg);
   color: hotpink;
 }
+main header .heart {
+  background-color: red;
+  display: inline-block;
+  height: 30px;
+  margin: 0 10px;
+  position: relative;
+  top: 0;
+  transform: rotate(-45deg);
+  width: 30px;
+}
+main header .heart:before, main header .heart:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+}
+main header .heart:before {
+  top: -15px;
+  left: 0;
+}
+main header .heart:after {
+  left: 15px;
+  top: 0;
+}
 main header .menu_navbar {
   display: flex;
   height: 3em;

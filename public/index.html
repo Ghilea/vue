@@ -19,58 +19,7 @@
         <div>Totalsumma: 0</div>
     </header>
 
-    <main id="app">
-        <!-- header for menu -->
-        <header>
-            <h1>{{title}}</h1>
-            <p v-if="menu_selected !== 'barn'">{{menu_selected}}</p>
-            <p class="child" v-else>{{menu_selected}}</p>
-
-            <div class="menu_navbar">
-                <div class="flex">
-                    <label for="choose_menu">Meny</label>
-                    <select id="choose_menu" v-on:change="changeGuest($event.target.value)" v-model="menu_selected">
-                        <option v-for="value in navbar.menu">{{value.title}}</option>
-                    </select>
-                </div>
-                
-                <div class="flex">
-                    <label for="choose_price">Prisklass</label>
-                    <select id="choose_price" v-on:change="changePrice($event.target.value)"
-                        v-model="menu_selected_price">
-                        <option v-for="value in navbar.option">{{value.title}}</option>
-                    </select>
-                </div>
-                
-            </div>
-
-        </header>
-
-        <section class="container">
-
-            <!-- section dishes -->
-            <section v-for="(item, itemIndex) in menu" class="menu_left">
-                <h2>{{item.title}}</h2>
-                <article v-for="(dish, dishIndex) in item.dish">
-                    <div class="flex_title" v-on:click="addDish(itemIndex, dishIndex)">
-                        <div class=" dotted_top"></div>
-                        <div>
-                            <h3>{{dish.name}}</h3>
-                            <p>{{dish.describe}}</p>
-                        </div>
-                        
-                        <div>
-                            <p class="menu_price">{{dish.price}}:-</p>
-                            <aside v-if="dish.aside > 0">1 st</aside>
-                        </div>
-                    </div>
-   
-                </article>
-            </section>
-            
-
-        </section>
-    </main>
+    <main id="app"></main>
 
     <!-- section footer -->
     <footer>
@@ -90,10 +39,8 @@
             <p>Lördag 13.00 - 23.00</p>
             <p>Söndag 13.00 - 22.00</p>
         </section>
-    </footer>
 
-    <script src="https://unpkg.com/vue@3"></script>
-    <script src="./vue/app.js"></script>
+    <script src="./js/bundle.js"></script>
 </body>
 
 </html>

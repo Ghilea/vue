@@ -4,11 +4,32 @@
         "address": "./src/",
         "output": "./public"
     },
+    "dependencies": {
+        "@vue/babel-helper-vue-jsx-merge-props": "1.0.0",
+        "@vue/babel-preset-jsx": "1.1.2",
+        "babel-plugin-jsx-vue-functional": "2.1.0",
+        "babel-preset-es2015": "6.24.1"
+        },
     "devDependencies": {
         "sass": "^1.51.0",
         "nodemon": "^2.0.16",
         "npm-run-all": "^4.1.5",
-        "copyfiles": "^2.4.1"
+        "copyfiles": "^2.4.1",
+        "vue": "3.2.33",
+        "vue-loader": "17.0.0",
+        "vue-template-compiler": "^2.6.14",
+        "webpack": "^5.72.0",
+        "webpack-cli": "^4.9.2",
+        "vue-style-loader": "4.1.3",
+        "css-loader": "6.7.1",
+        "@babel/cli": "^7.17.10",
+        "@babel/core": "^7.17.10",
+        "@babel/preset-env": "^7.17.10",
+        "@babel/plugin-transform-runtime": "^7.17.10",
+        "babel-loader": "^8.2.5",
+        "babel-plugin-transform-vue-jsx": "3.7.0",
+        "babel-plugin-syntax-jsx": "6.18.0",
+        "@vue/babel-plugin-jsx": "1.1.1"
     },
     "scripts": {
         "watch": "nodemon --exec \"npm run build\"",
@@ -17,7 +38,8 @@
         "copy:vue": "copyfiles -u 1 %npm_package_config_address%vue/**/* %npm_package_config_output%",
         "copy:index": "copyfiles -u 1 %npm_package_config_address%index.html %npm_package_config_output%",
         "copy": "npm-run-all --parallel copy:*",
-        "build": "npm-run-all copy build:*"
+        "webpack": "webpack",
+        "build": "npm-run-all webpack copy build:*"
     },
     "nodemonConfig": {
         "watch": [
