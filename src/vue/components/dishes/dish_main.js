@@ -20,12 +20,10 @@ export default {
             return dishMenu;
         },
         addDish(id, dishId) {
-            console.log(id, dishId);
             this.selectMenu().map((item, index) => {
                 if (index === id) {
                     item.dish.map((dish, dishIndex)=> {
                         if(dishIndex === dishId){
-                            console.log(dish);
                             dish.aside += 1;
                         }
                     })
