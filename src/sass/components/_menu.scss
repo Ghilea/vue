@@ -33,10 +33,7 @@ main {
             background-color: red;
             display: inline-block;
             height: 30px;
-            margin: 0 10px;
-            position: relative;
-            top: 0;
-            transform: rotate(-45deg);
+            transform: translate(3em, 0.1em) rotate(-45deg);
             width: 30px;
 
             &:before,

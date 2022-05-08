@@ -108,7 +108,7 @@ export default {
         <>
             <header>
                 <h1>{this.title}</h1> 
-                <p class={(store.state.menu_selected === 'barn') ? 'child' : (store.state.menu_selected === 'couple') ? 'couple' : ''}>{store.state.menu_selected}</p>
+                <p class={(store.state.menu_selected === 'barn') ? 'child' : (store.state.menu_selected === 'par') ? 'heart' : ''}>{(store.state.menu_selected === 'par') ? '' : store.state.menu_selected}</p>
                 
                 <div class="menu_navbar">
                     <div class="flex">
