@@ -5,25 +5,10 @@ export default {
     data(){
         return {
             title: 'Meny',
-                navbar: {
-                    menu: [{
-                            title: 'barn'
-                        },
-                        {
-                            title: 'vuxen'
-                        },
-                        {
-                            title: 'par'
-                        }
-                    ],
-                    option: [{
-                            title: 'billigt'
-                        },
-                        {
-                            title: 'allt'
-                        }
-                    ]
-                }
+            navbar: {
+                menu: [{title: 'barn'}, {title: 'vuxen'}, {title: 'par'}],
+                option: [{title: 'billigt'}, {title: 'allt'}]
+            }
         }
     },
     methods: {
@@ -37,32 +22,36 @@ export default {
                 case 'barn':
                     (price === 'billigt') ?
                     store.state.menu = this.cheapPrices(store.state.childrenMenu):
-                        store.state.menu = store.state.childrenMenu
+                        store.state.menu = this.all(store.state.childrenMenu)
                     break;
                 case 'vuxen':
                     (price === 'billigt') ?
                     store.state.menu = this.cheapPrices(store.state.adultMenu):
-                        store.state.menu = store.state.adultMenu
+                        store.state.menu = this.all(store.state.adultMenu)
                     break;
                 case 'par':
                     (price === 'billigt') ?
-                    store.state.menu = this.cheapPrices(coupleMenu):
-                        store.state.menu = store.state.coupleMenu
+                    store.state.menu = this.cheapPrices(store.state.coupleMenu):
+                        store.state.menu = this.all(store.state.coupleMenu);
                     break;
             }
 
         },
-        cheapPrices(data) {
+        all(data) {
             let newArray = [];
 
             data.map((item) => {
                 let newItem = item.dish.filter((dishes) => {
-                    return dishes.price < 150
+                    if (dishes.price > 150) {
+                        dishes.hide = false
+                    }
+                    return dishes
                 })
 
                 if (newItem.length > 0) {
                     newArray.push({
                         title: item.title,
+                        hide: false,
                         dish: newItem
                     });
                 }
@@ -71,8 +60,35 @@ export default {
 
             return newArray;
         },
-        addDish(id, disgId) {
-            console.log(id, disgId);
+        cheapPrices(data) {
+            let newArray = [];
+
+            data.map((item) => {
+                let newItem = item.dish.filter((dishes) => {
+                    if(dishes.price > 150){
+                        dishes.hide = true
+                    }
+                    
+                    return dishes
+                })
+                
+                if (newItem.length > 0) {
+                    newArray.push({
+                        title: item.title,
+                        hide: false,
+                        dish: newItem
+                    });
+                }else{
+                    newArray.push({
+                        title: item.title,
+                        hide: true,
+                        dish: newItem
+                    })
+                }
+
+            })
+
+            return newArray;
         }
     },
     beforeMount() {
