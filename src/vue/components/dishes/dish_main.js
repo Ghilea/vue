@@ -53,7 +53,7 @@ export default {
                                         
                                         <div>
                                             <p class="menu_price">{dish.price}:-</p>
-                                            <aside v-show={dish.aside > 0}>{dish.aside}</aside>
+                                            <aside v-show={dish.aside > 0}>{dish.aside} st</aside>
                                         </div>
                                     </div>
                 
