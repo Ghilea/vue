@@ -18,7 +18,9 @@ export default {
                  <i class="fa-solid fa-utensils"></i>
                 </div>
                 <div>
-                <button class="showCartButton" onClick={()=>store.state.showCart = true}> {this.buttonName} </button>
+                <a class="showCartButton" onClick={()=>store.state.showCart = true}> 
+                <i class="fa-solid fa-cart-arrow-down"></i> 
+                </a>
                     {this.title}
                     {store.state.totalCost} kr
                 </div>
