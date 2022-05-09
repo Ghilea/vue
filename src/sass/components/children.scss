@@ -1,5 +1,5 @@
 .childrenMenu {
-    
+
     .title{
         background-color: #1e73be;
         width: fit-content;
@@ -25,5 +25,9 @@
         &::after{
             right: -1.5em;
         }
+    }
+
+    .grass {
+        background-color: #72bf6a;
     }
 }
