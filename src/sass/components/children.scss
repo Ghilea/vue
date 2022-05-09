@@ -4,10 +4,26 @@
         background-color: #1e73be;
         width: fit-content;
         margin: 0 auto;
-        padding: 1em;
+        padding: 1em 3em;
+        color: hotpink;
+        position: relative;
+
+        &::before, &::after{
+            content: "";
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            width: 3em;
+            height: 3em;
+            transform: translateY(-50%) rotate(45deg);
+        }
 
         &::before{
-            
+            left: -1.5em;
+        }
+
+        &::after{
+            right: -1.5em;
         }
     }
 }

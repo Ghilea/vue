@@ -40,10 +40,8 @@ export default {
                 <section v-show = {
                     item.hide === false
                 }
-                class = {
-                    `menu_left ${(store.state.menu_selected === 'barn') ? 'title' : ''}`
-                } >
-                    <h2>{item.title}</h2>
+                class = "menu_left">
+                    <h2 class={(store.state.menu_selected === 'barn') ? 'title' : ''}>{item.title}</h2>
                     {
                         item.dish.map((dish, dishIndex) => {
                             return (
