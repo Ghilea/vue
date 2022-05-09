@@ -30,7 +30,6 @@ export default {
                     {this.title}
                     {total} kr
                 </div>
-                <p></p>
             </header>
         
         
