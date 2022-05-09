@@ -14,8 +14,7 @@ export default {
                     {this.title}
                     {store.state.totalCost} kr
                 </div>
-            </header>        
+            </header>
         )
     }
-    
 };

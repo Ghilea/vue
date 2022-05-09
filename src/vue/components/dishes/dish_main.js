@@ -66,9 +66,7 @@ export default {
         })
 
         return (
-        <>
-            <div class="container">{showDishMenu}</div>
-        </>
+           <div class="container">{showDishMenu}</div>
         )
     }
     

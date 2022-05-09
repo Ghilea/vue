@@ -11,6 +11,5 @@ export default (
             <Dish_main />
         </main>
         <Footer />
-        
     </>
 );
