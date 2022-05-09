@@ -1,9 +1,6 @@
 {
     "name": "restaurangmenyn",
-    "config": {
-        "address": "./src/",
-        "output": "./public"
-    },
+    
     "dependencies": {
         "@vue/babel-helper-vue-jsx-merge-props": "1.0.0",
         "@vue/babel-preset-jsx": "1.1.2",
@@ -34,10 +31,10 @@
     },
     "scripts": {
         "watch": "nodemon --exec \"npm run build\"",
-        "build:sass": "sass --no-source-map %npm_package_config_address%sass:%npm_package_config_output%/css",
-        "copy:assets": "copyfiles -u 1 %npm_package_config_address%assets/**/* %npm_package_config_output%",
-        "copy:vue": "copyfiles -u 1 %npm_package_config_address%vue/**/* %npm_package_config_output%",
-        "copy:index": "copyfiles -u 1 %npm_package_config_address%index.html %npm_package_config_output%",
+        "build:sass": "sass --no-source-map ./src/sass:./public/css",
+        "copy:assets": "copyfiles -u 1 ./src/assets/**/* ./public",
+        "copy:vue": "copyfiles -u 1 ./src/vue/**/* ./public",
+        "copy:index": "copyfiles -u 1 ./src/index.html ./public",
         "copy": "npm-run-all --parallel copy:*",
         "webpack": "webpack",
         "build": "npm-run-all webpack copy build:*"

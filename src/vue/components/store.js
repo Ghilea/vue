@@ -16,6 +16,7 @@ export const store = createStore({
             coupleMenu,
             menu_selected: 'vuxen',
             menu_selected_price: 'allt',
+            totalCost: 0,
             menu: []
         }
     }

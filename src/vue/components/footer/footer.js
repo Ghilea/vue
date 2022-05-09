@@ -3,10 +3,12 @@ export default {
     data() {
         return {
             needHelp: {
-                title: 'Need help',
+                title:'Need help',
                 describe:[
                     'Policy',
-                    'About us'
+                    'Om oss',
+                    'Frågor & svar',
+                    'Jobba hos oss'
                 ],
             icons: [
                 'fa-brands fa-facebook' ,
@@ -35,6 +37,10 @@ export default {
         }
     },
     render() {
+
+        const helpArray = this.needHelp.describe.map((item) => {
+            return <a href="#"><p>{item}</p></a>
+        })
         const contactArray = this.contact.describe.map((item) => {
             return <p>{item}</p>
         })
@@ -49,16 +55,16 @@ export default {
 
         return (
             <footer>
-                
+                <section>
+                    <h2>{this.needHelp.title}</h2>
+                    {helpArray}
+                </section>
                 <section>
                     <h2>{this.contact.title}</h2>
                     {contactArray}
                     <div class="icons">
                        {iconsArray}
                     </div>
-                </section>
-                <section>
-                
                 </section>
                 <section>
                     <h2>{this.open.title}</h2>

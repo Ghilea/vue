@@ -25,11 +25,13 @@ export default {
                     item.dish.map((dish, dishIndex)=> {
                         if(dishIndex === dishId){
                             dish.aside += 1;
+                            store.state.totalCost += dish.price
                         }
                     })
                 }
 
             })
+
         }
     },
     render() {
@@ -64,9 +66,7 @@ export default {
         })
 
         return (
-        <>
-            <div class="container">{showDishMenu}</div>
-        </>
+           <div class="container">{showDishMenu}</div>
         )
     }
     
