@@ -37,7 +37,12 @@ export default {
     render() {
         const showDishMenu = store.state.menu.map((item, index) => {
             return (
-                <section v-show={item.hide === false} class="menu_left">
+                <section v-show = {
+                    item.hide === false
+                }
+                class = {
+                    `menu_left ${(store.state.menu_selected === 'barn') ? 'title' : ''}`
+                } >
                     <h2>{item.title}</h2>
                     {
                         item.dish.map((dish, dishIndex) => {
@@ -66,7 +71,7 @@ export default {
         })
 
         return (
-           <div class="container">{showDishMenu}</div>
+           <div class={`container ${(store.state.menu_selected === 'barn') ? 'childrenMenu' : ''}`}>{showDishMenu}</div>
         )
     }
     

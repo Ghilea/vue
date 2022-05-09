@@ -1,3 +1,13 @@
 .childrenMenu {
-    background-color: hotpink;
+    
+    .title{
+        background-color: #1e73be;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 1em;
+
+        &::before{
+            
+        }
+    }
 }
