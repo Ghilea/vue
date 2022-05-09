@@ -13,7 +13,6 @@ export default {
         });
         return (
             <div>
-            <button class="showCartButton" onClick={()=>store.state.showCart = true}> {this.title} </button>
             <div class="cart" v-show={store.state.showCart}>
             <h1>{this.title}</h1>
             <p>{store.state.menu}</p>
