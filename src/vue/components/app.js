@@ -13,5 +13,6 @@ export default (
             <Dish_main />
         </main>
         <Footer />
+        <div class="overlay_all"></div>
     </>
 );
