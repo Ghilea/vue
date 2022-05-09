@@ -2,15 +2,63 @@ export const childrenMenu = [{
         title: 'Smarrig plockmat',
         hide: false,
         dish: [{
-                name: '',
-                describe: '',
-                price: 0,
+                name: 'Fruktspett',
+                describe: 'Frukt och grönsaker med olika roliga former trätt på ett spett',
+                price: 35,
                 aside: 0,
                 hide: false
             }, {
-                name: '',
-                describe: '',
-                price: 0,
+                name: 'Minipaj',
+                describe: 'Fylld med mild ost, spenat och grönsaker',
+                price: 40,
+                aside: 0,
+                hide: false
+            }, {
+                name: 'Barnrullar',
+                describe: 'Snittar med skinka, mjukost och smör',
+                price: 30,
+                aside: 0,
+                hide: false
+            }, {
+                name: 'Minipizza',
+                describe: 'Med ost, tomat, annanas och skinka',
+                price: 40,
+                aside: 0,
+                hide: false
+            }, {
+                name: 'Ansiktsmacka',
+                describe: 'Olika figurer på rostat bröd med god topping av nyttigheter',
+                price: 25,
+                aside: 0,
+                hide: false
+            }, {
+                name: 'Våffla',
+                describe: 'Med egengjord sylt',
+                price: 40,
+                aside: 0,
+                hide: false
+            }, {
+                name: 'Hummusigelkott',
+                describe: 'Veganskt med hummus och grönsaker i form av en igelkott',
+                price: 60,
+                aside: 0,
+                hide: false
+            }, {
+                name: 'Krämig soppa',
+                describe: 'Med broccoli, palsternacka och ädelost',
+                price: 55,
+                aside: 0,
+                hide: false
+            }, {
+                name: 'Favoritdipp',
+                describe: 'Olika rotfrukter och grönsaker dippas i philadelphiaost och gräddfil',
+                price: 35,
+                aside: 0,
+                hide: false
+            }, {
+                name: 'Avokado- räkröra',
+                describe: 'En lyxig röra som blandas med ägg, avokado, räckor, majonnäs och crème fraiche',
+                price: 40,
                 aside: 0,
                 hide: false
             }
@@ -147,7 +195,7 @@ export const adultMenu = [{
             }, {
                 name: 'Black Angus Burgare',
                 describe: 'Med cheddarost, dressing, bacon, tomat, saltgurka, picklad rödlök, sallad & pommes frites',
-                price: 189,
+                price: 149,
                 aside: 0,
                 hide: false
             }, {
@@ -177,7 +225,7 @@ export const adultMenu = [{
             }, {
                 name: 'veganska biffar',
                 describe: 'Biff gjord på zucchini, aubergine, potatis & morot, serveras med rostad potatis, tomatsås & sallad',
-                price: 199,
+                price: 145,
                 aside: 0,
                 hide: false
             }

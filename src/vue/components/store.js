@@ -18,8 +18,5 @@ export const store = createStore({
             menu_selected_price: 'allt',
             menu: []
         }
-    },
-    mutations: {
-        
     }
 })

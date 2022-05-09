@@ -14,7 +14,7 @@ export default {
                     if (dishes.aside > 0) {
                         totalCost += dishes.price
                     }
-                    return dishes
+                    return totalCost
                 })
 
                 console.log(newItem)

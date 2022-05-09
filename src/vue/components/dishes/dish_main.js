@@ -3,7 +3,7 @@ import { store } from '../store';
 export default {
     methods: {
         selectMenu(){
-            let dishMenu;
+            let dishMenu = '';
 
             switch (store.state.menu_selected) {
                 case 'barn':

@@ -1,7 +1,6 @@
 import { store } from '../store';
 
 export default {
-    
     data(){
         return {
             title: 'Meny',
@@ -78,12 +77,6 @@ export default {
                         hide: false,
                         dish: newItem
                     });
-                }else{
-                    newArray.push({
-                        title: item.title,
-                        hide: true,
-                        dish: newItem
-                    })
                 }
 
             })
