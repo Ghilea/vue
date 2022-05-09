@@ -1,14 +1,33 @@
 .navbar {
+    width: 100vw;
+    height: 11em;
     background-color: #222;
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    flex-direction: column;
+    
     div {
         display: flex;
         align-items: center;
         height: 4em;
         margin-left: 2em;
-    }    
+        font-size: 1em;  
+    } 
+
+    .resname{
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            font-size: 3em;
+            
+            .fa-solid{
+                display: flex;
+                margin: 1em;
+                color: #fff;
+                font-style: italic;
+            } 
+        }
+          
 }
