@@ -1,4 +1,6 @@
 @use './components/main';
 @use './components/menu';
+@use './components/children';
 @use './components/header';
 @use './components/footer';
+@use './components/_checkout.scss';

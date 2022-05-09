@@ -17,7 +17,9 @@ export const store = createStore({
             menu_selected: 'vuxen',
             menu_selected_price: 'allt',
             totalCost: 0,
-            menu: []
+            menu: [],
+            showCart: false,
+            orders: []
         }
     }
 })

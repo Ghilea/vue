@@ -12,7 +12,7 @@ export default {
                 case 'vuxen':
                     dishMenu = store.state.adultMenu;
                     break;
-                case 'couple':
+                case 'par':
                     dishMenu = store.state.coupleMenu;
                     break;
             }
@@ -25,7 +25,8 @@ export default {
                     item.dish.map((dish, dishIndex)=> {
                         if(dishIndex === dishId){
                             dish.aside += 1;
-                            store.state.totalCost += dish.price
+                            store.state.totalCost += dish.price;
+                            store.state.orders.push(dish.name)
                         }
                     })
                 }
@@ -37,8 +38,11 @@ export default {
     render() {
         const showDishMenu = store.state.menu.map((item, index) => {
             return (
-                <section v-show={item.hide === false} class="menu_left">
-                    <h2>{item.title}</h2>
+                <section v-show = {
+                    item.hide === false
+                }
+                class = "menu_left">
+                    <h2 class={(store.state.menu_selected === 'barn') ? 'title' : ''}>{item.title}</h2>
                     {
                         item.dish.map((dish, dishIndex) => {
                             return (
@@ -66,7 +70,7 @@ export default {
         })
 
         return (
-           <div class="container">{showDishMenu}</div>
+           <div class={`container ${(store.state.menu_selected === 'barn') ? 'childrenMenu' : ''}`}>{showDishMenu}</div>
         )
     }
     

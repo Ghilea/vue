@@ -72,15 +72,30 @@ export const childrenMenu = [{
                 price: 69,
                 aside: 0,
                 hide: false
-            }, {
-                name: '',
+            },
+            { 
+                name: "Hamburgare", 
                 describe: '',
-                price: 0,
-                aside: 0,
-                hide: false
-            }
-        ]
-    },{
+                price: 90, 
+                aside: 0, 
+                hide: false 
+            }, 
+            { 
+                name: "Pizza", 
+                describe: '',
+                price: 25, 
+                aside: 0, 
+                hide: false 
+            }, 
+            { 
+                name: "Köttbullar med spagetti", 
+                describe: '',
+                price: 90, 
+                aside: 0, 
+                hide: false 
+            } ]
+            }, 
+            {
         title: 'Kladdigt var det här',
         hide: false,
         dish: [{
@@ -90,14 +105,40 @@ export const childrenMenu = [{
                 aside: 0,
                 hide: false
             }, {
-                name: '',
+                name: 'Bananpannkaksspett',
                 describe: '',
                 price: 0,
                 aside: 0,
                 hide: false
-            }
-        ]
-    }
+            },
+            {
+                name: 'Glasyrtårta',
+                describe: '',
+                price: 0,
+                aside: 0,
+                hide: false
+            },
+            {
+                name: 'Glasyrtårta',
+                describe: '',
+                price: 0,
+                aside: 0,
+                hide: false
+            }, {
+            name: 'Vaniljglass',
+            describe: '',
+            price: 0,
+            aside: 0,
+            hide: false
+            },
+            {
+                name: 'Prinsesståra',
+                describe: '',
+                price: 0,
+                aside: 0,
+                hide: false
+                }
+        ] }
 ];
 
 export const adultMenu = [{
@@ -275,24 +316,6 @@ export const adultMenu = [{
                 price: 39,
                 aside: 0,
                 hide: false
-            }, {
-                name: '',
-                describe: '',
-                price: 0,
-                aside: 0,
-                hide: false
-            }, {
-                name: '',
-                describe: '',
-                price: 0,
-                aside: 0,
-                hide: false
-            }, {
-                name: '',
-                describe: '',
-                price: 0,
-                aside: 0,
-                hide: false
             }
         ]
     }
@@ -302,15 +325,22 @@ export const coupleMenu = [{
         title: 'Kärleksmums',
         hide: false,
         dish: [{
-                name: '',
+                name: 'Toastskagen',
                 describe: '',
-                price: 0,
+                price: 300,
                 aside: 0,
                 hide: false
             }, {
-                name: '',
+                name: 'Skaldjurspasta',
                 describe: '',
-                price: 0,
+                price: 90,
+                aside: 0,
+                hide: false
+            },
+            {
+                name: 'Grillad grön sparris med burrata',
+                describe: '',
+                price: 230,
                 aside: 0,
                 hide: false
             }
@@ -319,32 +349,59 @@ export const coupleMenu = [{
         title: 'Värmen finns alltid hos er',
         hide: false,
         dish: [{
-                name: '',
+                name: 'Romantiska köttbullar och spaghetti',
                 describe: '',
-                price: 0,
+                price: 650,
                 aside: 0,
                 hide: false
             }, {
-                name: '',
+                name: 'Laxfilé med duchessepotatis',
                 describe: '',
-                price: 0,
+                price: 80,
+                aside: 0,
+                hide: false
+            },
+            {
+                name: 'Oxfilé med gremolata och potatisgratäng',
+                describe: '',
+                price: 460,
+                aside: 0,
+                hide: false
+            },
+            {
+                name: 'Kycklinggryta med sötsur sås',
+                describe: '',
+                price: 200,
                 aside: 0,
                 hide: false
             }
+            
         ]
     },{
         title: 'Kladdigt och gott',
         hide: false,
         dish: [{
-                name: '',
+                name: 'Isig rosa fruktsmoothie',
                 describe: '',
-                price: 0,
+                price: 80,
                 aside: 0,
                 hide: false
             }, {
-                name: '',
+                name: 'Jordgubbskaka med gelé och härliga bär',
                 describe: '',
-                price: 0,
+                price: 350,
+                aside: 0,
+                hide: false
+            }, {
+                name: 'Vaniljglass',
+                describe: '',
+                price: 200,
+                aside: 0,
+                hide: false
+            }, {
+                name: 'Romantisk igelkottstårta',
+                describe: '',
+                price: 220,
                 aside: 0,
                 hide: false
             }
