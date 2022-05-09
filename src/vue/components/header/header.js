@@ -27,7 +27,6 @@ export default {
         
             <header class="navbar">
                 <div>{this.title} </div>
-                <p></p>
             </header>
         
         
