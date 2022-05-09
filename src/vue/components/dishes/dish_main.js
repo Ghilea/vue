@@ -12,7 +12,7 @@ export default {
                 case 'vuxen':
                     dishMenu = store.state.adultMenu;
                     break;
-                case 'couple':
+                case 'par':
                     dishMenu = store.state.coupleMenu;
                     break;
             }
@@ -25,7 +25,8 @@ export default {
                     item.dish.map((dish, dishIndex)=> {
                         if(dishIndex === dishId){
                             dish.aside += 1;
-                            store.state.totalCost += dish.price
+                            store.state.totalCost += dish.price;
+                            store.state.orders.push(dish.name)
                         }
                     })
                 }
