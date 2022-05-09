@@ -1,6 +1,7 @@
 .navbar {
     width: 100vw;
-    height: 11em;
+    min-height: 11em;
+    height: fit-content;
     background-color: #222;
     color: #fff;
     display: flex;
@@ -13,7 +14,12 @@
         align-items: center;
         height: 4em;
         font-size: 1em;  
-    } 
+    }
+
+    .headerMeny {
+        display: flex;
+        gap: 1em; 
+    }
 
     .resname{
             align-items: center;
