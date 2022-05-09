@@ -12,7 +12,6 @@ export default {
             return <p>{item}</p>
         });
         return (
-            <div>
             <div class="cart" v-show={store.state.showCart}>
             <h1>{this.title}</h1>
             <p>{store.state.menu}</p>
@@ -21,7 +20,6 @@ export default {
             <button class="closeCartButton" onClick={()=>store.state.showCart = false}>
             Stäng varukorg
             </button>
-            </div>
             </div>
         )
     }
