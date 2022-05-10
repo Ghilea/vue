@@ -56,6 +56,33 @@ main {
                 top: 0;
             }
         }
+        .heart2 {
+            background-color: red;
+            display: inline-block;
+            height: 30px;
+            transform: translate(-3.6em, 0.1em) rotate(-45deg);
+            width: 30px;
+
+            &:before,
+            &:after {
+                content: "";
+                background-color: red;
+                border-radius: 50%;
+                height: 30px;
+                position: absolute;
+                width: 30px;
+            }
+
+            &:before {
+                top: -15px;
+                left: 0;
+            }
+
+            &:after {
+                left: 15px;
+                top: 0;
+            }
+        }
 
         .menu_navbar {
             display: flex;
@@ -161,6 +188,7 @@ main {
 
         .menu_left {
             width: 100%;
+            margin-top: 10em;
         }
 
         .menu_right {

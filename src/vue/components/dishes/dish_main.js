@@ -1,3 +1,4 @@
+import { coupleMenu } from '../data';
 import { store } from '../store';
 
 export default {
@@ -41,7 +42,7 @@ export default {
                     item.hide === false
                 }
                 class = "menu_left">
-                    <h2 class={(store.state.menu_selected === 'barn') ? 'title' : ''}>{item.title}</h2>
+                    <h2 class={(store.state.menu_selected === 'barn') ? 'childtitle' : (store.state.menu_selected === 'par') ? 'partitle' : ''}>{item.title}</h2>
                     {
                         item.dish.map((dish, dishIndex) => {
                             return (
@@ -69,7 +70,7 @@ export default {
         })
 
         return (
-           <div class={`container ${(store.state.menu_selected === 'barn') ? 'childrenMenu' : ''}`}>{showDishMenu}</div>
+           <div class={`container ${(store.state.menu_selected === 'barn') ? 'childrenMenu' : (store.state.menu_selected === 'par') ? 'coupleMenu' : ''}`}>{showDishMenu}</div>
         )
     }
     

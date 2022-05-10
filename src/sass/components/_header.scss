@@ -1,11 +1,11 @@
 .navbar {
     width: 100vw;
-    min-height: 11em;
+    min-height: 20em;
     height: fit-content;
-    background-color: #222;
+    background-color: black;
     color: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     
@@ -21,6 +21,7 @@
             font-family: Arial, Helvetica, sans-serif;
             font-style: italic;
             font-size: 3em;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.676);
             
             .fa-solid{
                 display: flex;
@@ -28,6 +29,17 @@
                 color: #fff;
                 font-style: italic;
             } 
-        }
-          
+        } 
+}
+.childpicture{
+    background-image: url(https://cdn.wallpapersafari.com/46/46/hWzl8M.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+}
+.couplepicture{
+    background-image: url(https://www.ipsos.com/sites/default/files/styles/max_1300x1300/public/ct/news_and_polls/2022-02/valentines-day.jpg?itok=P73hWLPe);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
 }

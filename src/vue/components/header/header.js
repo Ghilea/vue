@@ -1,3 +1,5 @@
+import { store } from "../store";
+
 export default {
     data() {
         return {
@@ -5,9 +7,9 @@ export default {
         }
     },
     render() {
-
+ 
         return (
-            <header class="navbar">
+            <header class={`navbar ${ (store.state.menu_selected === 'barn') ? 'childpicture' : (store.state.menu_selected === 'par') ? 'couplepicture' : '' }`}>
                 <div class="resname">
                 <i class="fa-solid fa-utensils"></i>
                  {this.nameRes}
