@@ -119,11 +119,11 @@ export const childrenMenu = [{
                 hide: false
             },
             {
-            name: 'Vaniljglass',
-            describe: 'Egengjord vaniljglass',
-            price: 30,
-            aside: 0,
-            hide: false
+                name: 'Vaniljglass',
+                describe: 'Egengjord vaniljglass',
+                price: 30,
+                aside: 0,
+                hide: false
             },
             {
                 name: 'Prinsesståra',
@@ -131,7 +131,7 @@ export const childrenMenu = [{
                 price: 55,
                 aside: 0,
                 hide: false
-                }
+            }
         ] }
 ];
 
@@ -282,13 +282,13 @@ export const adultMenu = [{
                 hide: false
             }, {
                 name: 'Crème brûllé',
-                describe: '',
+                describe: 'Med färska bär',
                 price: 85,
                 aside: 0,
                 hide: false
             }, {
                 name: 'Mangosorbet',
-                describe: '',
+                describe: 'Egengjord mangosorbet',
                 price: 85,
                 aside: 0,
                 hide: false
@@ -306,7 +306,7 @@ export const adultMenu = [{
                 hide: false
             }, {
                 name: 'Tryffel',
-                describe: '',
+                describe: 'Choklad',
                 price: 39,
                 aside: 0,
                 hide: false
