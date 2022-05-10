@@ -100,41 +100,35 @@ export const childrenMenu = [{
         hide: false,
         dish: [{
                 name: 'Vaniljglass med chokladsås',
-                describe: '',
+                describe: 'Egengjord vaniljsglass och chokladsås',
                 price: 35,
                 aside: 0,
                 hide: false
             }, {
                 name: 'Bananpannkaksspett',
-                describe: '',
-                price: 0,
+                describe: 'Små bannanpankakor på spett med halonsås och grädde.',
+                price: 50,
                 aside: 0,
                 hide: false
             },
             {
                 name: 'Glasyrtårta',
-                describe: '',
-                price: 0,
+                describe: 'Liten tårta fylld med vaniljglass och toppad med chockladglasyr.',
+                price: 55,
                 aside: 0,
                 hide: false
             },
             {
-                name: 'Glasyrtårta',
-                describe: '',
-                price: 0,
-                aside: 0,
-                hide: false
-            }, {
             name: 'Vaniljglass',
-            describe: '',
-            price: 0,
+            describe: 'Egengjord vaniljglass',
+            price: 30,
             aside: 0,
             hide: false
             },
             {
                 name: 'Prinsesståra',
-                describe: '',
-                price: 0,
+                describe: 'Klassisk liten prinsesstårta',
+                price: 55,
                 aside: 0,
                 hide: false
                 }
