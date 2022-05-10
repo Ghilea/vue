@@ -12,7 +12,6 @@ export default {
             const cart = document.querySelector('.cart');
 
             if (!cart.contains(event.target)) {
-                console.log(cart.contains(event.target));
                 store.state.showCart = false;
             }
         }
@@ -35,30 +34,26 @@ export default {
                 overlay.removeEventListener('click', this.clickOutside);
                 overlay.classList.remove('overlay');
             }
-
-        }
+        }      
+        
         let showOrders = [];
-        /*if (store.state.orders.length > 0) {
-            showOrders = store.state.orders.reduce((prev, current) => {
-                prev[current] = (prev[current] || 0) + 1;
-                console.log(prev);
-                return prev;
+        let countOrder = [];
 
-            }, []
-            );
-        }
-        else {
+        if (store.state.orders.length > 0) {
+            countOrder = [...store.state.orders.reduce((prev, current) => {
+                if (!prev.has(current.name)) { 
+                    prev.set(current.name, { ...current, count: 0 });
+                }
+                prev.get(current.name).count++;
+                return prev;
+            }, new Map).values()];
+        }else {
             showOrders.push('Finns inget ännu');
-        }*/
-            showOrders= store.state.orders.reduce((acc, val) => {
-                if (acc.has(val)) {
-                    acc.set(val, acc.get(val) + 1);
-                } else {
-                    acc.set(val, 1);
-                };
-                return acc;                
-            }, new Map());
-            console.log(showOrders);
+        }
+
+        showOrders = countOrder.map((item) => {
+            return <p>{item.count}x - {item.name}</p>
+        });
 
         return (
             <div class="cart" v-show={store.state.showCart}>

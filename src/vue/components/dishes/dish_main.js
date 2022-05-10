@@ -26,14 +26,16 @@ export default {
                         if(dishIndex === dishId){
                             dish.aside += 1;
                             store.state.totalCost += dish.price;
-                            store.state.orders.push(dish.name);
+                            store.state.orders.push({name: dish.name});
                         }
                     })
                 }
             })
+            console.log(store.state.orders);
         }
     },
     render() {
+        
         const showDishMenu = store.state.menu.map((item, index) => {
             return (
                 <section v-show = {
