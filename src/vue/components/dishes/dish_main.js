@@ -31,7 +31,6 @@ export default {
                     })
                 }
             })
-            console.log(store.state.orders);
         }
     },
     render() {
