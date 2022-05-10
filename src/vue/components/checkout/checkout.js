@@ -4,7 +4,8 @@ import { store } from '../store';
 export default {
     data() {
         return {
-            title: ' Kundkorg '
+            title: ' Kundkorg ',
+            noOrder: 'Finns inget ännu'
         }
     },
     methods: {
@@ -48,7 +49,7 @@ export default {
                 return prev;
             }, new Map).values()];
         }else {
-            showOrders.push('Finns inget ännu');
+            showOrders.push(<p>{this.noOrder}</p>);
         }
 
         showOrders = countOrder.map((item) => {
