@@ -16,19 +16,6 @@
         font-size: 1em;  
     }
 
-    .headerMeny {
-        display: flex;
-        gap: 1em; 
-        
-        a {
-            font-size: 1.8rem;
-            &:hover {
-                opacity: 0.7;
-                cursor: pointer;
-            }
-        } 
-    }
-
     .resname{
             align-items: center;
             font-family: Arial, Helvetica, sans-serif;
