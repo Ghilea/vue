@@ -1,3 +1,4 @@
+import dish_main from '../dishes/dish_main';
 import { store } from '../store';
 
 export default {
@@ -34,19 +35,38 @@ export default {
                 overlay.removeEventListener('click', this.clickOutside);
                 overlay.classList.remove('overlay');
             }
-            
-        }
 
-        const showOrders = store.state.orders.map((item) => {
-            return <p>{item}</p>
-        });
+        }
+        let showOrders = [];
+        /*if (store.state.orders.length > 0) {
+            showOrders = store.state.orders.reduce((prev, current) => {
+                prev[current] = (prev[current] || 0) + 1;
+                console.log(prev);
+                return prev;
+
+            }, []
+            );
+        }
+        else {
+            showOrders.push('Finns inget ännu');
+        }*/
+            showOrders= store.state.orders.reduce((acc, val) => {
+                if (acc.has(val)) {
+                    acc.set(val, acc.get(val) + 1);
+                } else {
+                    acc.set(val, 1);
+                };
+                return acc;                
+            }, new Map());
+            console.log(showOrders);
+
         return (
             <div class="cart" v-show={store.state.showCart}>
-            <h1>{this.title}</h1>
-            <p>{store.state.totalCost} kr</p>
-            <div>{showOrders}</div>
-            <div class="closeCartButton" onClick={()=> store.state.showCart = false}>
-            </div>
+                <h1>{this.title}</h1>
+                <p>{store.state.totalCost} kr</p>
+                <div>{showOrders}</div>
+                <div class="closeCartButton" onClick={() => store.state.showCart = false}>
+                </div>
             </div>
         )
     }

@@ -26,13 +26,11 @@ export default {
                         if(dishIndex === dishId){
                             dish.aside += 1;
                             store.state.totalCost += dish.price;
-                            store.state.orders.push(dish.name)
+                            store.state.orders.push(dish.name);
                         }
                     })
                 }
-
             })
-
         }
     },
     render() {
