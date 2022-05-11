@@ -3,7 +3,7 @@ import { store } from "../store";
 export default {
     data() {
         return {
-            nameRes:'Resturang D.V.J.A '
+            nameRes:'Resturang D.V.J'
         }
     },
     render() {
