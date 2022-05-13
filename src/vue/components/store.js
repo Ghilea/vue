@@ -19,6 +19,7 @@ export const store = createStore({
             totalCost: 0,
             menu: [],
             showCart: false,
+            showChat: false,
             orders: []
         }
     }

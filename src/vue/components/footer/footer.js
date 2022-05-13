@@ -20,18 +20,17 @@ export default {
            contact: {
                    title: 'Kontakt',
                    describe: [
-                       'Klarabergsvägen 24, 653 78 Stockholm',
+                       'Havet',
                        '056-787442',
-                       'E-mail: test@resturang.se'
+                       'E-mail: kryssning@info.se'
                    ]
                },
-            open: {
-                title: 'Öppttider',
+            bookings: {
+                title: 'Bokningar',
                 describe: [
-                    'Måndag, Tisdag, Onsdag, Torsdag 16.00 - 22.30',
-                    'Fredag 15.00 - 23.00',
-                    'Lördag 13.00 - 23.00',
-                    'Söndag 13.00 - 22.00'
+                    'Antal bokningar båten: 3',
+                    'Platser kvar på resturangen: 10',
+                    'Spabokningar: 4'
                 ]
             }
         }
@@ -45,7 +44,7 @@ export default {
             return <p>{item}</p>
         })
 
-        const openArray = this.open.describe.map((item) => {
+        const bookingsArray = this.bookings.describe.map((item) => {
             return <p>{item}</p>
         })
 
@@ -67,8 +66,8 @@ export default {
                     </div>
                 </section>
                 <section>
-                    <h2>{this.open.title}</h2>
-                    {openArray}
+                    <h2>{this.bookings.title}</h2>
+                    {bookingsArray}
                 </section>
             </footer>
         )

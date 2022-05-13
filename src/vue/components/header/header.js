@@ -7,9 +7,40 @@ export default {
             img:'https://as2.ftcdn.net/v2/jpg/02/28/13/53/1000_F_228135369_EWQJsS9TEskImi51e5AxpEsYsonOIBMM.jpg',
         }
     },
+
+    methods: {
+        fetchData() {
+            fetch('https://api.openweathermap.org/data/2.5/weather?lat={51°}&lon={0°}&appid={62df453d04ae87dfb0297b3560c79d98}}')
+                .then(response => {
+                    if (response.status !== 200) {
+                        console.log('Looks like there was a problem. Status Code: ' +
+                            response.status);
+                        return;
+                    }
+
+                    response.json().then(
+                        data => {
+                            this.joke = data.value
+                        });
+                }
+                )
+                .catch(function (err) {
+                    console.log('Fetch Error: ', err);
+                })
+        },
+        currentTime() {
+            const current = new Date();
+            const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`
+            return date;
+        }
+    },
+
+    
     render() {
         const date = new Date()
         console.log(date)
+
+        
         return (
             <header class={`navbar ${ (store.state.menu_selected === 'barn') ? 'childpicture' : (store.state.menu_selected === 'par') ? 'couplepicture' : '' }`}>
                 
@@ -17,7 +48,7 @@ export default {
                 <img src={this.img}/>
                 {this.nameRes}
                 <div class="date">
-                {date}
+                {this.currentTime()}
                 </div>
                 </div>
             

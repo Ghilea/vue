@@ -4,12 +4,15 @@ import Header from './header/header';
 import Footer from './footer/footer';
 import Checkout from './checkout/checkout';
 import CartButton from './header/cartButton';
+import Chat from './chat/chat';
+
 
 export default (
     <>
         <Header />
         <CartButton />
         <main>
+            <Chat />
             <Checkout />
             <Dish_header />
             <Dish_main />
