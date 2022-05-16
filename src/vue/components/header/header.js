@@ -21,7 +21,8 @@ export default {
 
                     response.json().then(
                         data => {
-                            this.joke = data.value
+                            this.weather = data.value,
+                            this.main = data.weather
                         });
                 }
                 )
