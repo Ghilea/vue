@@ -1,4 +1,5 @@
 import { store } from "../store";
+import weather from "../weather/weather";
 
 export default {
     data() {
@@ -49,6 +50,7 @@ export default {
                 {this.nameRes}
                 <div class="date">
                 {this.currentTime()}
+                {weather}
                 </div>
                 </div>
             
