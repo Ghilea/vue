@@ -6,35 +6,24 @@ export default {
         }
     },
     methods: {
-        fetchData() {
-
-            console.log('test2');
-            const data = fetch('https://api.openweathermap.org/data/2.5/weather?q=London&appid=62df453d04ae87dfb0297b3560c79d98')
-                .then(response => {
-                    if (response.status !== 200) {
-                        console.log('Looks like there was a problem. Status Code: ' +
-                        response.status);
-                        
-                    }
-
-                    response.json().then(data => {
-                        return data;
-                    });
-
-                })
-                .catch(function (err) {
-                    console.log('Fetch Error: ', err);
-                })
-
-                console.log('test' + data);
-                return data;
-        },
+            weatherBalloon () {
+            var key = '62df453d04ae87dfb0297b3560c79d98';
+            fetch('https://api.openweathermap.org/data/2.5/weather?id=' +2643743+ '&appid=' + key)
+            .then(function(resp) { return resp.json() }) // Convert data to json
+            .then(function(data) {
+              console.log(data);
+            })
+            .catch(function() {
+              // catch any errors
+            });
+          }
+          
       
     },
 
     
     render() {
-        console.log(this.fetchData())
+        console.log(this.weatherBalloon())
 
         return (
             <div>
