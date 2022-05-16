@@ -3,8 +3,8 @@ import axios from 'axios'
 export default {
     data() {
         return {
-            name:'Väder',
-            showWeather: []
+            name:'Väder: ',
+            showWeather: ''
         }
     },
     methods: {
@@ -15,9 +15,9 @@ export default {
             axios.get(url)
             .then(res => res.data)
             .then(data => {
-                if (data !== undefined || data !== '') {
-                    this.showWeather = data.weather;
-                }
+                data.weather.map((item) => {
+                    this.showWeather = item.description
+                })
             })
         }
     },
@@ -26,12 +26,9 @@ export default {
     },
     render() {
      
-        console.log(this.showWeather)
-
         return (
-            <div>
-                {this.name}
-                {this.showWeather}
+            <div class='weather'>
+                <p>{this.name}{this.showWeather}</p>
             </div>
         )
        
