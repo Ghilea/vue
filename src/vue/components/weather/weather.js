@@ -40,7 +40,7 @@ export default {
        
         return (
             <div>
-                {console.log(fetchData())}
+                {console.log(this.fetchData())}
                 
             </div>
         )
