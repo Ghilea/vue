@@ -15,9 +15,8 @@ export default {
         return (
             <div class='cards'>
                 <div class='spa btn'>
-                    <div class='front'>
+                    <div div class = 'front frosted'>
                         <h2>Titel</h2>
-                        <div class='frosted'></div>
                     </div>
                     <div class='back'>
                         <div class='img'></div>
