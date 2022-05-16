@@ -9,7 +9,7 @@ export default {
     },
     methods: {
         weather () {
-            const key = 'f980892b9adf9cc107ab0ba8a73230fc';
+            const key = 'e9544c9ceb9a2e2513c480ae14274e78';
             const url = 'https://api.openweathermap.org/data/2.5/weather?id=' + 2643743 + '&appid=' + key;
             
             axios.get(url)
