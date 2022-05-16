@@ -1,6 +1,7 @@
 import { store } from "../store";
 import Weather from "./weather";
 import DateTime from "./dateTime";
+import Cards from '../cards';
 
 export default {
     data() {
@@ -17,6 +18,7 @@ export default {
                     <img src={this.img}/>
                     <p>{this.name}</p>
                 </div>
+                <Cards />
                 <DateTime />
                 <Weather />
             </header>
