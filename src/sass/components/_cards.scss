@@ -10,42 +10,30 @@
     perspective: 1000px;
 
     .front {
+        width: 100%;
         background-size: cover;
         background-position: center;
-        transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform 1.7s cubic-bezier(0.4, 0.2, 0.2, 1);
         backface-visibility: hidden;
         text-align: center;
         color: #fff;
         transform: rotateY(0deg);
         transform-style: preserve-3d;
+        backdrop-filter: blur(5px);
+        background-color: #ffffff57;
+        box-shadow: 0 0 11px 2px #7272728a;
 
-        &::after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            width: 100%;
-            height: 100%;
-            content: '';
-            display: block;
-            opacity: .6;
-            background-color: #000;
-            backface-visibility: hidden;
-            border-radius: 10px;
+        &:hover {
+            transform: rotateY(-180deg);
+            transform-style: preserve-3d;
         }
     }
 
     .back{
         background-size: cover;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
-        border-radius: 10px;
         background-position: center;
-        transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform 1.7s cubic-bezier(0.4, 0.2, 0.2, 1);
         backface-visibility: hidden;
-        text-align: center;
-        min-height: 280px;
-        height: auto;
-        border-radius: 10px;
         color: #fff;
         font-size: 1.5rem;
         transform: rotateY(180deg);
@@ -54,38 +42,11 @@
         top:0;
         left:0;
         width: 100%;
-    }
 
-    .back{
-        background: #cedce7;
-        background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
-    }
-
-    .front:after{
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        content: '';
-        display: block;
-        opacity: .6;
-        background-color: #000;
-        backface-visibility: hidden;
-        border-radius: 10px;
-    }
-
-    &:hover .front {
-        transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-        transform: rotateY(-180deg);
-        transform-style: preserve-3d;
-    }
-    
-    &:hover .back {
-        transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-        transform: rotateY(0deg);
-        transform-style: preserve-3d;
+        &:hover {
+            transform: rotateY(0deg);
+            transform-style: preserve-3d;
+        }
     }
 
     .btn {
@@ -93,36 +54,18 @@
         height: 21em;
     }
 
+/*****************************/
     .spa{
         overflow: hidden;
         position: relative;
         display: flex;
+        border-radius: 0.5em;
 
         .img {
             background-image: url(../assets/image/spa.jpg);
-            width: 10em;
-            height: 10em;
+            width: 100%;
+            height: 100%;
             background-size: cover;
-            border-radius: 50%;
-        }
-
-       .frosted {
-            position: absolute;
-            left: 0;
-            top:0;
-            bottom:0;
-            right:0;
-            backdrop-filter: blur(5px);
-            background-color: #ffffff57;
-            border-radius: 0.5em;
-            box-shadow: 0 0 11px 2px #7272728a;
-            transition: 0.5s all;
-
-            &:hover {
-                box-shadow: 0 0 11px 2px #cecece8a;
-                backdrop-filter: blur(0);
-                cursor: pointer;
-            }
         }
 
         h2{
@@ -147,7 +90,7 @@
         position: relative;
 
         .img {
-            /*background-image: url(../assets/image/spa.jpg);*/
+            background-image: url(../assets/image/event.jpg);
             width: 100%;
             background-size: cover;
         }
@@ -183,7 +126,7 @@
         position: relative;
 
         .img {
-            background-image: url('https://www.vikingcruises.com/oceans/images/CC_SEA_Restaurant_Window_Views_432x243_tcm13-115182.jpg');
+            background-image: url(../assets/image/resturang.jpg);
             width: 100%;
             background-size: cover;
         }
@@ -219,7 +162,7 @@
         position: relative;
 
         .img {
-            *background-image: url('https://www.cruiseindustrynews.com/images/stories/wire/2020/june/AZA_Ship_Evening_Event_082.jpg');
+            *background-image: url('');
             width: 100%;
             background-size: cover;
         }
