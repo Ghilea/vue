@@ -1,33 +1,37 @@
+import axios from 'axios'
+
 export default {
     data() {
         return {
             name:'Väder',
-            
+            showWeather: []
         }
     },
     methods: {
-            weatherBalloon () {
-            var key = '62df453d04ae87dfb0297b3560c79d98';
-            fetch('https://api.openweathermap.org/data/2.5/weather?id=' +2643743+ '&appid=' + key)
-            .then(function(resp) { return resp.json() }) // Convert data to json
-            .then(function(data) {
-              console.log(data);
+        weather () {
+            const key = 'f980892b9adf9cc107ab0ba8a73230fc';
+            const url = 'https://api.openweathermap.org/data/2.5/weather?id=' + 2643743 + '&appid=' + key;
+            
+            axios.get(url)
+            .then(res => res.data)
+            .then(data => {
+                if (data !== undefined || data !== '') {
+                    this.showWeather = data.weather;
+                }
             })
-            .catch(function() {
-              // catch any errors
-            });
-          }
-          
-      
+        }
     },
-
-    
+    beforeMount() {
+        this.weather();
+    },
     render() {
-        console.log(this.weatherBalloon())
+     
+        console.log(this.showWeather)
 
         return (
             <div>
                 {this.name}
+                {this.showWeather}
             </div>
         )
        

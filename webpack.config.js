@@ -34,7 +34,8 @@ module.exports = {
                         ],
                         "plugins": [
                             "jsx-vue-functional",
-                            "@vue/babel-plugin-jsx"
+                            "@vue/babel-plugin-jsx",
+                            ["@babel/transform-runtime"]
                         ]
                     }
                 }
