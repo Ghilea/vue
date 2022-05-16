@@ -11,23 +11,24 @@ export default {
             fetch('https://api.openweathermap.org/data/2.5/weather?id=' +2643743+ '&appid=' + key)
             .then(function(resp) { return resp.json() }) // Convert data to json
             .then(function(data) {
-              console.log(data);
+                console.log(data.weather)
+                let weather = data.weather;
+                return weather;
             })
             .catch(function() {
               // catch any errors
             });
-          }
-          
+          },
       
     },
 
     
     render() {
-        console.log(this.weatherBalloon())
 
         return (
             <div>
                 {this.name}
+                {this.weatherBalloon()}
             </div>
         )
        
