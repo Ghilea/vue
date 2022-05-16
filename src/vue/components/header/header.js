@@ -1,5 +1,5 @@
 import { store } from "../store";
-import weather from "../weather/weather";
+import Weather from "../weather/weather";
 
 export default {
     data() {
@@ -39,10 +39,7 @@ export default {
 
     
     render() {
-        const date = new Date()
-        console.log(date)
-
-        
+ 
         return (
             <header class={`navbar ${ (store.state.menu_selected === 'barn') ? 'childpicture' : (store.state.menu_selected === 'par') ? 'couplepicture' : '' }`}>
                 
@@ -51,7 +48,7 @@ export default {
                 {this.nameRes}
                 <div class="date">
                 {this.currentTime()}
-                {weather}
+                <Weather />
                 </div>
                 </div>
             
