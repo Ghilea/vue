@@ -15,8 +15,27 @@ export default {
             if (!chat.contains(event.target)) {
                 store.state.showChat = false;
             }
+        },
+        sendMessage() {
+            const mess = document.querySelector('.input');
+            const chatOutput = document.querySelector('.chatOutp');
+            const jsonMess = JSON.stringify(mess);
+
+            store.state.websocket.send({"message": "Hejsan"})
+        },
+
+        checkWebsocket() {
+            const ws = new WebSocket("ws://localhost:1234/websocket");
+            store.state.websocket = ws;
+            ws.addEventListener("open", () => {
+                console.log("We are connected");
+                });
         }
     },
+    mounted() {
+        this.checkWebsocket()
+    },
+
     render() {
 
         const overlay = document.querySelector('.overlay_all');
@@ -35,13 +54,16 @@ export default {
                 overlay.removeEventListener('click', this.clickOutside);
                 overlay.classList.remove('overlay');
             }
-        }      
+        }
 
         return (
             <div class="chat" v-show={store.state.showChat}>
                 <h1>{this.title}</h1>
                 <div class="closeChatBtn" onClick={() => store.state.showChat = false}>
                 </div>
+                <input class="input" placeholder='Chatta med oss' />
+                <div class="chatOutp"></div>
+                <button class="btn" onClick="sendMessage()">knapp</button>
                 <h1>
                     {this.bokningar}
                 </h1>

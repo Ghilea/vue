@@ -20,7 +20,8 @@ export const store = createStore({
             menu: [],
             showCart: false,
             showChat: false,
-            orders: []
+            orders: [],
+            websocket: ""
         }
     }
 })
