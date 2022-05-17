@@ -14,6 +14,7 @@
     <button class="btn" onclick="sendMessage()">knapp</button>
 
     <script>
+        const store = require('../store');
         const ws = new WebSocket("ws://localhost:1234/websocket");
         function sendMessage() {
             const mess = document.querySelector('.input');
