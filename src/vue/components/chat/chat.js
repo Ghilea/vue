@@ -25,9 +25,9 @@ export default {
             console.log(mess.value);
 
             store.state.websocket.send(jsonMess);
-            chatOutput.innerHTML += mess.value + '<br/>';
-            adminChatOutput.innerHTML += mess.value + '<br/>';
-            
+            chatOutput.innerHTML += 'Du - ' + mess.value + '<br/>';
+            adminChatOutput.innerHTML += 'Kund - ' + mess.value + '<br/>';
+
         },
 
         checkWebsocket() {
@@ -35,17 +35,17 @@ export default {
             store.state.websocket = ws;
             ws.addEventListener("open", () => {
                 console.log("We are connected");
-                });
+            });
         },
-        sendAdminMessage () {
-            const adminMess = document.querySelector('.adminInput');
+        sendAdminMessage() {
+            const adminMess = document.querySelector('.admin-input');
             const adminChatOutput = document.querySelector('.adminChatOutput');
             const adminJsonMess = JSON.stringify(adminMess.value);
             const chatOutput = document.querySelector('.chatOutp');
 
             store.state.websocket.send(adminJsonMess);
-            adminChatOutput.innerHTML += adminMess.value + '<br/>';
-            chatOutput.innerHTML += adminMess.value + '<br/>';
+            adminChatOutput.innerHTML += 'Du - ' + adminMess.value + '<br/>';
+            chatOutput.innerHTML += 'Admin - ' + adminMess.value + '<br/>';
 
         }
     },
@@ -76,17 +76,23 @@ export default {
         return (
             <div class="chat" v-show={store.state.showChat}>
                 <div class="adminChat" v-show={store.state.showAdminChat}>
-                    <input class="adminInput"/>
-                    <div class="adminChatOutput"></div>
-                    <button class="adminBtn" onClick={() => this.sendAdminMessage()}>knapp</button>
+                <div class="admin-input-group">
+                    <input required type="text" name="text" autocomplete="off" class="admin-input"/>
+                        <label class="admin-user-label">Svara kund</label>
                 </div>
-                <button onclick={ () => store.state.showAdminChat = true}>admin</button>
+                    <div class="adminChatOutput"></div>
+                    <button class="adminBtn" onClick={() => this.sendAdminMessage()}>Skicka</button>
+                </div>
+                <button class="showAdminChat" onclick={() => store.state.showAdminChat = true}>admin</button>
                 <h1>{this.title}</h1>
                 <div class="closeChatBtn" onClick={() => store.state.showChat = false}>
                 </div>
-                <input class="input" placeholder='Chatta med oss' />
+                <div class="input-group">
+                    <input required type="text" name="text" autocomplete="off" class="input"/>
+                        <label class="user-label">Har du någon fråga?</label>
+                </div>
+                <button class="btn" onClick={() => this.sendMessage()}>Skicka</button>
                 <div class="chatOutp"></div>
-                <button class="btn" onClick={() => this.sendMessage()}>knapp</button>
                 <h1>
                     {this.bokningar}
                 </h1>
