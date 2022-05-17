@@ -4,7 +4,7 @@ import {
 import {
     adultMenu,
     childrenMenu,
-    coupleMenu
+    coupleMenu,
 } from './data';
 
 // Create a new store instance.
