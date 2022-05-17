@@ -17,10 +17,14 @@ export default {
                 <div class='spa'>
                     
                     <div div class='front'>
-                        <h2>Titel</h2>
+                        <div class='inner'>
+                            <h2>front</h2>
+                        </div>
                     </div>
                     <div class='back'>
-                        <div class='img'></div>
+                        <div class='inner'>
+                            <h2>Back</h2>
+                        </div>
                     </div>
                     
                 </div>
