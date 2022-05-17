@@ -403,10 +403,10 @@ export const coupleMenu = [{
     }, 
 ]
 
-export const spaTreatment = [{
+export const spaTreatments = [{
     title: 'ANSIKTSBEHANDLINGAR',
     hide: false,
-    dish: [{
+    treatment: [{
             name: 'ANSIKTE 80 MIN',
             describe: 'En rengörande och avslappnande ansiktsbehandling med produkter anpassade efter din hudtyp.I behandlingen ingår lugnande ryggmassage samt att terapeuten skräddarsyr behandlingen efter dina specifika önskemål.',
             price: 1690,
@@ -430,7 +430,7 @@ export const spaTreatment = [{
 },{
     title: 'Massage',
     hide: false,
-    dish: [{
+    treatment: [{
             name: 'LYMFMASSAGE',
             describe: '50 min lymfmassage',
             price: 800,
@@ -462,7 +462,7 @@ export const spaTreatment = [{
 },{
     title: 'Manikyr',
     hide: false,
-    dish: [{
+    treatment: [{
             name: 'GELELACKNING',
             describe: '60 min ',
             price: 500,
@@ -491,7 +491,7 @@ export const spaTreatment = [{
     },{
         title: 'KROPPSBEHANDLINGAR',
         hide: false,
-        dish: [{
+        treatment: [{
                 name: 'KROPPSSKRUBB',
                 describe: 'En helkroppsskrubb som peelar bort gamla hudceller, ökar cirkulationen och gör huden mjuk och len.',
                 price: 790,
