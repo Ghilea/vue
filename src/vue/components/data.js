@@ -431,29 +431,29 @@ export const spaTreatment = [{
     title: 'Massage',
     hide: false,
     dish: [{
-            name: 'Romantiska köttbullar och spaghetti',
-            describe: '',
-            price: 650,
+            name: 'LYMFMASSAGE',
+            describe: '50 min lymfmassage',
+            price: 800,
             aside: 0,
             hide: false
         }, {
-            name: 'Laxfilé med duchessepotatis',
-            describe: '',
-            price: 80,
+            name: 'KLASSISK ',
+            describe: '30min Klassisk massage',
+            price: 600,
             aside: 0,
             hide: false
         },
         {
-            name: 'Oxfilé med gremolata och potatisgratäng',
-            describe: '',
-            price: 460,
+            name: 'HOT STONE ',
+            describe: '25min Hot Stone',
+            price: 600,
             aside: 0,
             hide: false
         },
         {
-            name: 'Kycklinggryta med sötsur sås',
-            describe: '',
-            price: 200,
+            name: 'AROMA ANTI-STRESS',
+            describe: '30min Aroma Anti-stress massage',
+            price: 600,
             aside: 0,
             hide: false
         }
@@ -463,27 +463,27 @@ export const spaTreatment = [{
     title: 'Manikyr',
     hide: false,
     dish: [{
-            name: 'Isig rosa fruktsmoothie',
-            describe: '',
-            price: 80,
+            name: 'GELELACKNING',
+            describe: '60 min ',
+            price: 500,
             aside: 0,
             hide: false
         }, {
-            name: 'Jordgubbskaka med gelé och härliga bär',
-            describe: '',
-            price: 350,
+            name: 'MANIKYR INKL.LACKFÄRG',
+            describe: '90 min',
+            price: 500,
             aside: 0,
             hide: false
         }, {
-            name: 'Vaniljglass',
-            describe: '',
-            price: 200,
+            name: 'NAGELFÖRSTÄRKNING/PÅFYLLNING GELE',
+            describe: 'Från 60 min.Förstärkning på egen nagel',
+            price: 750,
             aside: 0,
             hide: false
         }, {
-            name: 'Romantisk igelkottstårta',
-            describe: '',
-            price: 220,
+            name: 'NAGELFÖRLÄNGNING NYTT SETT',
+            describe: 'Från 60 min.Gelé.',
+            price: 850,
             aside: 0,
             hide: false
         }
