@@ -36,7 +36,7 @@ export default {
                         <div div class='front'>
                             <div class='inner'>
                                 <h2>{this.spa.name}</h2>
-                                <p>{this.spa.describe}</p>
+                                <p>{this.spa.describe}</p> 
                             </div>
                         </div>
                         <div class='back'>
