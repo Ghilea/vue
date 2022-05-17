@@ -11,14 +11,15 @@ export default {
                 <h1>{item.title}</h1>
                 {
                     item.treatment.map((item2) => {
-                        return <h2>{item2.name}</h2>
-                            
-                    })
-                },
-                {
-                    item.treatment.map((item2) => {
-                        return <p>{item2.describe}</p>
-                            
+                        return( 
+                        <>
+                        <h2>{item2.name}</h2>
+                        <p>{item2.describe}</p>
+                        <div>
+                        <p>{item2.price}</p>  
+                        </div>
+                        </>
+                        )      
                     })
                 },
                 </div>
