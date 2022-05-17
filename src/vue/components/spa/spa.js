@@ -3,16 +3,18 @@ import { spaTreatments } from '../data';
 
 export default {
     methods: {
-       test() {
-        const hej = spaTreatments.map((item) => {
-            const data = item.treatment.map((item2) => {
+       spaT() {
+        const spa = spaTreatments.map((item) => {
+            return(<h1>{item.title}</h1>
+             {item.treatment.map((item2) => {
                 return <p> {item2.name} </p>
-            })
+            }}))
+        
 
-            return data
+            
         })
 
-        return hej;
+        return spa;
        }
          
     },
@@ -20,7 +22,7 @@ export default {
         
 
         return (
-            <div>{this.test()}</div>
+            <div>{this.spaT()}</div>
         )
         
     }             
