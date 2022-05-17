@@ -400,5 +400,129 @@ export const coupleMenu = [{
                 hide: false
             }
         ]
-    }
+    }, 
 ]
+
+export const spaTreatment = [{
+    title: 'ANSIKTSBEHANDLINGAR',
+    hide: false,
+    dish: [{
+            name: 'ANSIKTE 80 MIN',
+            describe: 'En rengörande och avslappnande ansiktsbehandling med produkter anpassade efter din hudtyp.I behandlingen ingår lugnande ryggmassage samt att terapeuten skräddarsyr behandlingen efter dina specifika önskemål.',
+            price: 1690,
+            aside: 0,
+            hide: false
+        }, {
+            name: 'ANSIKTE 50 MIN',
+            describe: 'En rengörande ansiktsbehandling med produkter anpassade efter din hudtyp. Terapeuten skräddarsyr behandlingen efter dina specifika önskemål.',
+            price: 1290,
+            aside: 0,
+            hide: false
+        },
+        {
+            name: 'ANSIKTE 20 MIN',
+            describe: 'En kortare ansiktsbehandling med rengöring anpassat efter din hudtyp och med fokus på ansiktsmassage.',
+            price: 790,
+            aside: 0,
+            hide: false
+        }
+    ]
+},{
+    title: 'Massage',
+    hide: false,
+    dish: [{
+            name: 'Romantiska köttbullar och spaghetti',
+            describe: '',
+            price: 650,
+            aside: 0,
+            hide: false
+        }, {
+            name: 'Laxfilé med duchessepotatis',
+            describe: '',
+            price: 80,
+            aside: 0,
+            hide: false
+        },
+        {
+            name: 'Oxfilé med gremolata och potatisgratäng',
+            describe: '',
+            price: 460,
+            aside: 0,
+            hide: false
+        },
+        {
+            name: 'Kycklinggryta med sötsur sås',
+            describe: '',
+            price: 200,
+            aside: 0,
+            hide: false
+        }
+        
+    ]
+},{
+    title: 'Manikyr',
+    hide: false,
+    dish: [{
+            name: 'Isig rosa fruktsmoothie',
+            describe: '',
+            price: 80,
+            aside: 0,
+            hide: false
+        }, {
+            name: 'Jordgubbskaka med gelé och härliga bär',
+            describe: '',
+            price: 350,
+            aside: 0,
+            hide: false
+        }, {
+            name: 'Vaniljglass',
+            describe: '',
+            price: 200,
+            aside: 0,
+            hide: false
+        }, {
+            name: 'Romantisk igelkottstårta',
+            describe: '',
+            price: 220,
+            aside: 0,
+            hide: false
+        }
+    ]
+    },{
+        title: 'KROPPSBEHANDLINGAR',
+        hide: false,
+        dish: [{
+                name: 'KROPPSSKRUBB',
+                describe: 'En helkroppsskrubb som peelar bort gamla hudceller, ökar cirkulationen och gör huden mjuk och len.',
+                price: 790,
+                aside: 0,
+                hide: false
+            }, {
+                name: 'HUVUDHARMONI',
+                describe: 'Härlig behandling av hårbotten med massage av skalp, nacke, axlar och dekolltage.',
+                price: 790,
+                aside: 0,
+                hide: false
+            }, {
+                name: 'FOTHARMONI',
+                describe: 'Ljuvlig fotbehandling. Fotbad med scrub därefter skön massage av fötter och underben.',
+                price: 790,
+                aside: 0,
+                hide: false
+            }, {
+                name: 'GARRA RUFA',
+                describe: 'Låt Garra rufa-fiskarna göra dina fötter mjuka och fina. Fiskarna som inte har några tänder nafsar försiktigt bort överflödiga hudpartiklar och hård hud från fötterna. Blodcirkulationen stimuleras av deras micromassage och fötterna blir mjuka och silkeslena.',
+                price: 650,
+                aside: 0,
+                hide: false
+            }, {
+                name: 'INPACKNING',
+                describe: 'En kroppsskrubb för hela kroppen som peelar bort gamla hudceller och ökar cirkulationen och gör huden mjuk. Kroppen får sedan en inpackning i varm, återfuktande olja medan ansiktet får en rengöring och avstressande ansiktsmassage.',
+                price: 1290,
+                aside: 0,
+                hide: false
+            }
+        ]
+    },
+]
+
