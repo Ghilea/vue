@@ -21,7 +21,8 @@ export const store = createStore({
             showCart: false,
             showChat: false,
             orders: [],
-            websocket: ""
+            websocket: "",
+            adminChat: false
         }
     }
 })

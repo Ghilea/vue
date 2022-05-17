@@ -20,11 +20,13 @@ export default {
             const mess = document.querySelector('.input');
             const chatOutput = document.querySelector('.chatOutp');
             const jsonMess = JSON.stringify(mess.value);
+            const adminChatOutput = document.querySelector('.adminChatOutput');
 
             console.log(mess.value);
 
             store.state.websocket.send(jsonMess);
-            chatOutput.innerHTML += mess.value + '<br/>'
+            chatOutput.innerHTML += mess.value + '<br/>';
+            adminChatOutput.innerHTML += mess.value + '<br/>';
             
         },
 
@@ -35,7 +37,17 @@ export default {
                 console.log("We are connected");
                 });
         },
+        sendAdminMessage () {
+            const adminMess = document.querySelector('.adminInput');
+            const adminChatOutput = document.querySelector('.adminChatOutput');
+            const adminJsonMess = JSON.stringify(adminMess.value);
+            const chatOutput = document.querySelector('.chatOutp');
 
+            store.state.websocket.send(adminJsonMess);
+            adminChatOutput.innerHTML += adminMess.value + '<br/>';
+            chatOutput.innerHTML += adminMess.value + '<br/>';
+
+        }
     },
     mounted() {
         this.checkWebsocket()
@@ -63,6 +75,12 @@ export default {
 
         return (
             <div class="chat" v-show={store.state.showChat}>
+                <div class="adminChat" v-show={store.state.showAdminChat}>
+                    <input class="adminInput"/>
+                    <div class="adminChatOutput"></div>
+                    <button class="adminBtn" onClick={() => this.sendAdminMessage()}>knapp</button>
+                </div>
+                <button onclick={ () => store.state.showAdminChat = true}>admin</button>
                 <h1>{this.title}</h1>
                 <div class="closeChatBtn" onClick={() => store.state.showChat = false}>
                 </div>
