@@ -14,8 +14,9 @@ export default {
     render() {
         return (
             <div class='cards'>
-                <div class='spa btn'>
-                    <div div class = 'front'>
+                <div class='spa'>
+                    
+                    <div div class='front'>
                         <h2>Titel</h2>
                     </div>
                     <div class='back'>
@@ -23,20 +24,20 @@ export default {
                     </div>
                     
                 </div>
-                <div class='event btn'>
-                    <h2>Titel</h2>
+                <div class='event'>
+
                     <div class='img'></div>
-                    <div class='frosted'></div>
+
                 </div>
-                <div class='restaurant btn'>
-                    <h2>Titel</h2>
+                <div class='restaurant'>
+
                     <div class='img'></div>
-                    <div class='frosted'></div>
+
                 </div>
-                <div class='booking btn'>
-                    <h2>Titel</h2>
+                <div class='booking'>
+
                     <div class='img'></div>
-                    <div class='frosted'></div>
+
                 </div>
             </div>
         )
