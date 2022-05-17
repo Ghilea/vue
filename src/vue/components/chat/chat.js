@@ -19,9 +19,13 @@ export default {
         sendMessage() {
             const mess = document.querySelector('.input');
             const chatOutput = document.querySelector('.chatOutp');
-            const jsonMess = JSON.stringify(mess);
+            const jsonMess = JSON.stringify(mess.value);
 
-            store.state.websocket.send({"message": "Hejsan"})
+            console.log(mess.value);
+
+            store.state.websocket.send(jsonMess);
+            chatOutput.innerHTML += mess.value + '<br/>'
+            
         },
 
         checkWebsocket() {
@@ -30,7 +34,8 @@ export default {
             ws.addEventListener("open", () => {
                 console.log("We are connected");
                 });
-        }
+        },
+
     },
     mounted() {
         this.checkWebsocket()
@@ -63,7 +68,7 @@ export default {
                 </div>
                 <input class="input" placeholder='Chatta med oss' />
                 <div class="chatOutp"></div>
-                <button class="btn" onClick="sendMessage()">knapp</button>
+                <button class="btn" onClick={() => this.sendMessage()}>knapp</button>
                 <h1>
                     {this.bokningar}
                 </h1>
