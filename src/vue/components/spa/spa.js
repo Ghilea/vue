@@ -1,4 +1,4 @@
-/* import { coupleMenu } from '../data'; */
+import { spaTreatment } from '../data';
 import { store } from '../store';
 
 export default {
@@ -20,7 +20,7 @@ export default {
 
             return dishMenu;
         },
-        addDish(id, dishId) {
+        /* addDish(id, dishId) {
             this.selectMenu().map((item, index) => {
                 if (index === id) {
                     item.dish.map((dish, dishIndex)=> {
@@ -32,7 +32,7 @@ export default {
                     })
                 }
             })
-        }
+        } */
     },
     render() {
         
