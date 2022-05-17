@@ -7,33 +7,34 @@ export default {
         const spa = spaTreatments.map((item) => {
             return(
 
-                <div class="spaT">
+                <div>
                 <h1>{item.title}</h1>
+                <div class="row">
                 {
+                    
                     item.treatment.map((item2) => {
                         return( 
                         <>
-                        <div class="collum">
+                        <div class="column">
                         <h2>{item2.name}</h2>
                         </div>
-                        <div class="collum">
+                        <div class="column">
                         <p>{item2.describe}</p>
                         </div>
-                        <div class="collum">
+                        <div class="column">
                         <p>{item2.price}</p>  
                         </div>
                         </>
                         )      
                     })
-                },
+                    
+                }
+                </div>
                 </div>
             )  
         })
-
-        return spa;
-       }
-         
-    },
+    }
+},
     render() {
         
 
