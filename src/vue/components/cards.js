@@ -1,8 +1,23 @@
 export default {
     data() {
         return {
-            name:'Väder: ',
-            showWeather: ''
+            spa: {
+                name: 'Spa',
+                describe: 'En underbar upplevese'
+            },
+            event: {
+                name: 'Swingersklubbar',
+                describe: 'Njut'
+            },
+            restaurant: {
+                name: 'Restaurang',
+                describe: 'En smakfull kväll'
+            },
+            booking: {
+                name: 'Rum',
+                describe: 'Njut av utsikten'
+            }
+
         }
     },
     methods: {
@@ -14,34 +29,68 @@ export default {
     render() {
         return (
             <div class='cards'>
-                <div class='spa'>
-                    
-                    <div div class='front'>
-                        <div class='inner'>
-                            <h2>front</h2>
+                <h1>Välkommen till att njuta i lyx</h1>
+                <div class='flexIt'>
+                    <div class='spa'>
+
+                        <div div class='front'>
+                            <div class='inner'>
+                                <h2>{this.spa.name}</h2>
+                                <p>{this.spa.describe}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class='back'>
-                        <div class='inner'>
-                            <h2>Back</h2>
+                        <div class='back'>
+                            <div class='inner'>
+                                <h2>Back</h2>
+                            </div>
                         </div>
+                        
                     </div>
-                    
-                </div>
-                <div class='event'>
+                    <div class='event'>
 
-                    <div class='img'></div>
+                        <div div class='front'>
+                            <div class='inner'>
+                                <h2>{this.event.name}</h2>
+                                <p>{this.event.describe}</p>
+                            </div>
+                        </div>
+                        <div class='back'>
+                            <div class='inner'>
+                                <h2>Back</h2>
+                            </div>
+                        </div>
 
-                </div>
-                <div class='restaurant'>
+                    </div>
+                    <div class='restaurant'>
 
-                    <div class='img'></div>
+                        <div div class='front'>
+                            <div class='inner'>
+                                <h2>{this.restaurant.name}</h2>
+                                <p>{this.restaurant.describe}</p>
+                            </div>
+                        </div>
+                        <div class='back'>
+                            <div class='inner'>
+                                <h2>Back</h2>
+                            </div>
+                        </div>
 
-                </div>
-                <div class='booking'>
+                    </div>
+                    <div class='booking'>
 
-                    <div class='img'></div>
+                        <div div class='front'>
+                            <div class='inner'>
+                                <h2>{this.booking.name}</h2>
+                                <p>{this.booking.describe}</p>
+                            </div>
+                        </div>
+                        <div class='back'>
+                            <div class='inner'>
+                                <h2>Back</h2>
+                            </div>
+                        </div>
 
+                    </div>
                 </div>
             </div>
         )
