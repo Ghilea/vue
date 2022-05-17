@@ -5,7 +5,7 @@ import Footer from './footer/footer';
 import Checkout from './checkout/checkout';
 import CartButton from './header/cartButton';
 import Chat from './chat/chat';
-
+import Spa from './spa/spa';
 
 export default (
     <>
@@ -14,6 +14,7 @@ export default (
         <main>
             <Chat />
             <Checkout />
+            <Spa/>
             <Dish_header />
             <Dish_main />
         </main>
