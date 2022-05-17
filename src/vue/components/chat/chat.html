@@ -20,7 +20,7 @@
             const mess = document.querySelector('.input');
             const chatOutput = document.querySelector('.chatOutp');
             const jsonMess = JSON.stringify(mess.value);
-            ws.send(jsonMess);
+            store.state.WebSocket.send(jsonMess);
             chatOutput.innerHTML += mess.value + '<br/>'
             
         }
