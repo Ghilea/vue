@@ -5,7 +5,6 @@ import {
     adultMenu,
     childrenMenu,
     coupleMenu,
-    spaTreatment
 } from './data';
 
 // Create a new store instance.
@@ -15,7 +14,6 @@ export const store = createStore({
             adultMenu,
             childrenMenu,
             coupleMenu,
-            spaTreatment,
             menu_selected: 'vuxen',
             menu_selected_price: 'allt',
             totalCost: 0,
