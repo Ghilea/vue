@@ -55,11 +55,13 @@ export default {
                                 <p>{this.event.describe}</p>
                             </div>
                         </div>
+                        <router-link to='/vue/public/events'>
                         <div class='back'>
                             <div class='inner'>
                                 <h2>Back</h2>
                             </div>
                         </div>
+                        </router-link>
 
                     </div>
                     <div class='restaurant'>
@@ -87,11 +89,13 @@ export default {
                                 <p>{this.booking.describe}</p>
                             </div>
                         </div>
+                        <router-link to='/vue/public/booking'>
                         <div class='back'>
                             <div class='inner'>
                                 <h2>Back</h2>
                             </div>
                         </div>
+                        </router-link>
 
                     </div>
                 </div>

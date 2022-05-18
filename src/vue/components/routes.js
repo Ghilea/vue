@@ -19,6 +19,14 @@ const router = createRouter({
         {
             path: startPath + '/spa',
             component: Spa
+        },
+        {
+            path: startPath + '/events',
+            component: Spa
+        }, 
+        {
+            path: startPath + '/booking',
+            component: Spa
         }
     ]
 })
