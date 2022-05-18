@@ -4,11 +4,52 @@
     width: 100vw;
     margin-top: 1em;
     margin-bottom: 6em;
+    gap: 1em;
+    align-items: center;
     
-
-
+    .column{
+    display: flex;
+    width: 35vw;
 }
-.column{
+    } 
+    h1{
+        margin: 1.5em;
+        text-align: center;
+        font-family: "Palatino Linotype", "Book Antiqua", serif;
+        font-size: 3rem;
+        letter-spacing: 0.6px;
+        word-spacing: 0.4px;
+        color: #000000;
+        font-weight: 400;
+        text-decoration: overline solid rgb(68, 68, 68);
+        font-style: italic;
+        font-variant: normal;
+        text-transform: uppercase;
+    }
+    .p-name{
+       
+        font-family: "Palatino Linotype", "Book Antiqua", serif;
+        font-size: 1.5rem;
+        letter-spacing: 0.6px;
+        word-spacing: 0.4px;
+        color: #000000;
+        font-weight: 400;
+        font-style: italic;
+        font-variant: normal;
+        text-transform: uppercase;      
+   }
+   .p-describe{
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-size: 1rem;
+        letter-spacing: 0.4px;
+        word-spacing: 0.4px;
+        color: #000000;
+        font-weight: 400;
+        text-decoration: none solid rgb(68, 68, 68);
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+    }
+    .p-price{
 
-}
-  
+    }

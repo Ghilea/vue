@@ -22,7 +22,13 @@ export const store = createStore({
             showChat: false,
             orders: [],
             websocket: "",
-            adminChat: false
+            adminChat: false,
+            resturantModal: false,
+            spaModal: false,
+            roomModal: false,
+            restaurantBooking: "",
+            roomBooking: "",
+            spaBooking: ""
         }
     }
 })

@@ -1,0 +1,66 @@
+.booking {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.bookButton {
+    background-size:100% 200%;
+    background-image: linear-gradient(to bottom, #2f2f2f 50%, rgb(255, 255, 255) 50%);
+    margin: 1rem auto;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 250px;
+    height: 80px;
+    transition: background-position .7s;
+
+    &:hover {
+        background-position: 0 -100%;
+        color: black;
+    }
+}
+
+
+.restaurantModal {
+    padding: 3rem;
+    background: #fff;
+    border: 1px solid #666;
+    width: 60vw;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 20%;
+    top: 25%;
+    bottom: 30%;
+    z-index: 1;
+}
+
+.roomModal {
+    padding: 3rem;
+    background: #fff;
+    border: 1px solid #666;
+    width: 60vw;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 20%;
+    top: 25%;
+    bottom: 30%;
+    z-index: 1;
+}
+
+.spaModal {
+    padding: 3rem;
+    background: #fff;
+    border: 1px solid #666;
+    width: 60vw;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 20%;
+    top: 25%;
+    bottom: 30%;
+    z-index: 1;
+}
