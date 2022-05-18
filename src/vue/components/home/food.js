@@ -1,38 +1,19 @@
 export default {
     data() {
         return {
-            title: 'The Many Sides of the Caribbean',
-            describe: 'You can’t ask for a better place to get away from it all than the Caribbean. With over 80 islands in the Caribbean, and multiple cultures contributing to their creation, you can be sure no two regions are alike. Chill in the Eastern Caribbean, explore history in the Western Caribbean, marvel at natural wonders in Southern Caribbean. Discover the one-and-only Everglades in Florida, exotic rainforests in Costa Rica, and the never-ending beauty of the ABC Islands.',
+            title: 'Dine Like a Local on your Caribbean Cruise',
             content: [
                 {
-                    title: 'Antigua',
-                    button: 'Explore Antigua',
-                    img: './assets/image/home/antigua.jpg'
+                    title: 'Flavors & Seafood',
+                    describe: "The Caribbean is not only blessed with the freshest seafood from the surrounding sea but culinary influences from all corners of the earth. You’ll enjoy a fusion of African, Creole, Cajun, Amerindian, Spanish, French, Latin America, Indian, and Chinese."
                 },
                 {
-                    title: 'Aruba',
-                    button: 'Explore Aruba',
-                    img: './assets/image/home/aruba.jpg'
+                    title: 'Rum & Spirits',
+                    describe: "Nearly every island produces local rums that range from light white to heavy-bodied dark amber. Recipes are closely guarded secrets with specific varieties of wood and aging techniques. Make sure to also try a minty mojito or some Mexican tequila."
                 },
                 {
-                    title: 'Belize',
-                    button: 'Explore Belize',
-                    img: './assets/image/home/belize.jpg'
-                },
-                {
-                    title: 'Bonaire',
-                    button: 'Explore Bonaire',
-                    img: './assets/image/home/bonaire.jpg'
-                },
-                {
-                    title: 'Central America',
-                    button: 'Explore Central America',
-                    img: './assets/image/home/central_america.jpg'
-                },
-                {
-                    title: 'Costa Rica',
-                    button: 'Explore Costa Rica',
-                    img: './assets/image/home/costa_rica.jpg'
+                    title: 'Chocolate',
+                    describe: "The cacao trade here is respected around the world for producing some of the finest cacao beans to provide ingredients for many luxury chocolatiers across the globe. Look for tours of a local cacao plantation and learn how it goes from bean to bar."
                 }
            ]
         }
@@ -42,15 +23,14 @@ export default {
         const content = this.content.map((item) => {
             return (
                 <div class='imgCard'>
-                    <img src={item.img} />
                     <h2>{item.title}</h2>
-                    <button>{item.button}</button>
+                    <p>{item.describe}</p>
                 </div>
             )
         })
  
         return (
-            <div class='explore'>
+            <div class='food'>
                 <header>
                     <h2>{this.title}</h2>
                     <p>{this.describe}</p>
