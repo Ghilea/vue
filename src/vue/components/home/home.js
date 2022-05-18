@@ -8,6 +8,7 @@ export default {
             <>
                 <Explore />
                 <Activity />
+                <Food />
             </>
         )
        
