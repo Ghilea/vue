@@ -2,6 +2,8 @@ import { createWebHistory, createRouter } from "vue-router";
 import Dish from './dishes/dish';
 import Home from './home/home';
 import Spa from './spa/spa';
+import Events from './event/event';
+import Booking from './booking/booking';
 
 const startPath = '/vue/public';
 
@@ -22,11 +24,11 @@ const router = createRouter({
         },
         {
             path: startPath + '/events',
-            component: Spa
+            component: Events
         }, 
         {
             path: startPath + '/booking',
-            component: Spa
+            component: Booking
         }
     ]
 })
