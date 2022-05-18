@@ -10,5 +10,6 @@
 @use './components/weather';
 @use './components/dateTime';
 @use './components/cards';
-@use './components/home';
+@use './components/home/activity';
+@use './components/home/explore';
 @use './components/spa';
