@@ -428,7 +428,7 @@ export const spaTreatments = [{
         }
     ]
 },{
-    title: 'Massage',
+    title: 'MASSAGE',
     hide: false,
     treatment: [{
             name: 'LYMFMASSAGE',
@@ -438,21 +438,21 @@ export const spaTreatments = [{
             hide: false
         }, {
             name: 'KLASSISK ',
-            describe: '30min Klassisk massage',
+            describe: '30 min Klassisk massage',
             price: 600,
             aside: 0,
             hide: false
         },
         {
             name: 'HOT STONE ',
-            describe: '25min Hot Stone',
+            describe: '25 min Hot Stone',
             price: 600,
             aside: 0,
             hide: false
         },
         {
             name: 'AROMA ANTI-STRESS',
-            describe: '30min Aroma Anti-stress massage',
+            describe: '30 min Aroma Anti-stress massage',
             price: 600,
             aside: 0,
             hide: false
@@ -460,7 +460,7 @@ export const spaTreatments = [{
         
     ]
 },{
-    title: 'Manikyr',
+    title: 'MANIKYR',
     hide: false,
     treatment: [{
             name: 'GELELACKNING',

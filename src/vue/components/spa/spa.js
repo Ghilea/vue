@@ -15,14 +15,14 @@ export default {
                     item.treatment.map((item2) => {
                         return( 
                         <>
-                        <div class="column">
-                        <h2>{item2.name}</h2>
+                        <div class="column p-name">
+                        <p >{item2.name}</p>
                         </div>
-                        <div class="column">
+                        <div class="column p-describe">
                         <p>{item2.describe}</p>
                         </div>
-                        <div class="column">
-                        <p>{item2.price}</p>
+                        <div class="column p-price">
+                        <p>{item2.price} :-</p>
                         </div>
                         </>
                         )
