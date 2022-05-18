@@ -1,13 +1,26 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Home from './dishes/dish_main';
+import Dish from './dishes/dish';
+import Home from './home/home';
+import Spa from './spa/spa';
 
-const history = createWebHistory();
+const startPath = '/vue/public';
+
 const router = createRouter({
-    history,
-    routes: [{
-        path: '/',
-        component: Home
-    }]
+    history: createWebHistory(),
+    routes: [
+        {
+            path: startPath + '/',
+            component: Home
+        },
+        {
+            path: startPath + '/restaurant',
+            component: Dish
+        },
+        {
+            path: startPath + '/spa',
+            component: Spa
+        }
+    ]
 })
 
 export default router;

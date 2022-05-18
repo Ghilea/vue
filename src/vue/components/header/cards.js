@@ -39,12 +39,13 @@ export default {
                                 <p>{this.spa.describe}</p> 
                             </div>
                         </div>
+                        <router-link to = '/vue/public/spa'>
                         <div class='back'>
                             <div class='inner'>
                                 <h2>Back</h2>
                             </div>
                         </div>
-                        
+                        </router-link>
                     </div>
                     <div class='event'>
 
@@ -69,11 +70,13 @@ export default {
                                 <p>{this.restaurant.describe}</p>
                             </div>
                         </div>
+                        <router-link to='/vue/public/restaurant'>
                         <div class='back'>
                             <div class='inner'>
                                 <h2>Back</h2>
                             </div>
                         </div>
+                        </router-link>
 
                     </div>
                     <div class='booking'>

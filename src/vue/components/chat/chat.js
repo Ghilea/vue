@@ -34,7 +34,7 @@ export default {
             const ws = new WebSocket("ws://localhost:1234/websocket");
             store.state.websocket = ws;
             ws.addEventListener("open", () => {
-                console.log("We are connected");
+                //console.log("We are connected");
                 });
         },
         sendAdminMessage () {
