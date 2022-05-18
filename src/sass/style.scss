@@ -10,6 +10,8 @@
 @use './components/weather';
 @use './components/dateTime';
 @use './components/cards';
-@use './components/home';
+@use './components/home/activity';
+@use './components/home/explore';
+@use './components/home/food';
 @use './components/spa';
-@use './components/bookingModals.scss';
+@use './components/bookingModals';
