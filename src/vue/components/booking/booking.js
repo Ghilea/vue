@@ -22,6 +22,7 @@ export default {
             const leave = document.querySelector('.roomDateDep');
 
             store.state.roomBooking.push(date.value, leave.value);
+            store.state.totalBooking -= 1;
             console.log(store.state.roomBooking);
         },
         spaBook() {
