@@ -8,6 +8,7 @@ export default {
             imgFooter:[{link:'./assets/image/spa-5.jpg'},{link:'./assets/image/sauna.jpg'},{link:'./assets/image/Fisk-spa.jpg'}]
                
         }
+        
     },
     methods: {
        spaT() {

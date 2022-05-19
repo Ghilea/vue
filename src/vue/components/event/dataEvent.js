@@ -1,12 +1,50 @@
-export const spaTreatments = [{
-    title: 'ANSIKTSBEHANDLINGAR',
-    hide: false,
-    treatment: [{
-            name: 'ANSIKTE 80 MIN',
-            describe: 'En rengörande och avslappnande ansiktsbehandling med produkter anpassade efter din hudtyp.I behandlingen ingår lugnande ryggmassage samt att terapeuten skräddarsyr behandlingen efter dina specifika önskemål.',
-            price: 1690,
-            aside: 0,
-            hide: false
-    }]
-}
+export const events = [{
+        title: 'Events ombord',
+        hide: false,
+        treatment: [{
+                name: 'Musikkvällar',
+                describe: '',
+                time:'',
+                aside: 0,
+                hide: false
+            },{
+                name: 'Flamingokvällar',
+                describe: '',
+                time:'',
+                aside: 0,
+                hide: false
+            },{
+                name: 'Musikkvällar',
+                describe: '',
+                time:'',
+                aside: 0,
+                hide: false
+            },
+        ]
+    },{
+        title: 'Att göra under resan.',
+        hide: false,
+        treatment: [{
+                name: 'Gym',
+                describe: '',
+                aside: 0,
+                hide: false
+            },{
+                name: 'Pool',
+                describe: '',
+                aside: 0,
+                hide: false
+            },{
+                name: 'Spa',
+                describe: '',
+                aside: 0,
+                hide: false
+            },{
+                name: 'Närliggande stränder',
+                describe: '',
+                aside: 0,
+                hide: false
+            }
+        ]
+    },
 ]
