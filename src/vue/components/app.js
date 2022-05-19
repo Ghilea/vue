@@ -1,7 +1,7 @@
-import Header from './header/header';
-import Footer from './footer/footer';
-import CartButton from './header/cartButton';
-import Chat from './chat/chat';
+import Header from '@comp/header/header';
+import Footer from '@comp/footer/footer';
+import CartButton from '@comp/header/cartButton';
+import Chat from '@comp/chat/chat';
 
 export default {
     render(){

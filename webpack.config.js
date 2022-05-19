@@ -10,6 +10,14 @@ module.exports = {
         path: path.resolve(__dirname, output),
         filename: 'bundle.js'
     },
+    resolve: {
+        extensions: ['.js', '.vue', '.json'],
+        alias: {
+            '@': path.resolve(__dirname, 'src'),
+            '@comp': path.resolve(__dirname, 'src/vue/components'),
+            '@img': path.resolve(__dirname, 'public/assets/image')
+        }
+    },
     module: {
         rules: [
             {
