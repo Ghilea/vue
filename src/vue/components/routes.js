@@ -12,22 +12,27 @@ const router = createRouter({
     routes: [
         {
             path: startPath + '/',
+            name: 'home',
             component: Home
         },
         {
             path: startPath + '/restaurant',
+            name: 'dish',
             component: Dish
         },
         {
             path: startPath + '/spa',
+            name: 'spa',
             component: Spa
         },
         {
             path: startPath + '/events',
+            name: 'events',
             component: Events
         }, 
         {
             path: startPath + '/booking',
+            name: 'booking',
             component: Booking
         }
     ]
