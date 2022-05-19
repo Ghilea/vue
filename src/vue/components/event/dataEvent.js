@@ -1,22 +1,22 @@
 export const events = [{
         title: 'Events ombord',
         hide: false,
-        treatment: [{
+        todos: [{
                 name: 'Musikkvällar',
                 describe: '',
-                time:'',
+                time:'Mån-Ons 18:00-22:00',
                 aside: 0,
                 hide: false
             },{
-                name: 'Flamingokvällar',
+                name: 'Flamingofredag',
                 describe: '',
-                time:'',
+                time:'Fre 20:00-03:00',
                 aside: 0,
                 hide: false
             },{
-                name: 'Musikkvällar',
+                name: 'Stora scenen',
                 describe: '',
-                time:'',
+                time:'Tors-Lörd 18:00-23:00',
                 aside: 0,
                 hide: false
             },
@@ -27,21 +27,25 @@ export const events = [{
         treatment: [{
                 name: 'Gym',
                 describe: '',
+                time:'',
                 aside: 0,
                 hide: false
             },{
                 name: 'Pool',
                 describe: '',
+                time:'',
                 aside: 0,
                 hide: false
             },{
                 name: 'Spa',
                 describe: '',
+                time:'',
                 aside: 0,
                 hide: false
             },{
                 name: 'Närliggande stränder',
                 describe: '',
+                time:'',
                 aside: 0,
                 hide: false
             }
