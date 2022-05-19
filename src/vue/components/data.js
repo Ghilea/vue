@@ -403,6 +403,7 @@ export const coupleMenu = [{
     }, 
 ]
 
+
 export const spaTreatments = [{
     title: 'ANSIKTSBEHANDLINGAR',
     hide: false,

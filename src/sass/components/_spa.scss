@@ -6,17 +6,20 @@
     margin-bottom: 6em;
     gap: 1em;
     align-items: center;
+    /* border: 2px inset rgba(79,79,79,0.09); */
     
     .column{
     display: flex;
-    width: 35vw;
-}
-    } 
+    width: 40vw;
+    
+    
+    }
+} 
     h1{
         margin: 1.5em;
         text-align: center;
         font-family: "Palatino Linotype", "Book Antiqua", serif;
-        font-size: 3rem;
+        font-size: 2.3rem;
         letter-spacing: 0.6px;
         word-spacing: 0.4px;
         color: #000000;
@@ -29,7 +32,7 @@
     .p-name{
        
         font-family: "Palatino Linotype", "Book Antiqua", serif;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         letter-spacing: 0.6px;
         word-spacing: 0.4px;
         color: #000000;
@@ -50,6 +53,4 @@
         font-variant: normal;
         text-transform: none;
     }
-    .p-price{
-
-    }
+    
