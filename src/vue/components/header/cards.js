@@ -11,8 +11,8 @@ export default {
                     button: 'Lär mer'
                 }, {
                     class: 'event',
-                    name: 'Swingersklubbar',
-                    describe: 'Njut',
+                    name: 'Evenemang',
+                    describe: 'Upptäck glädjen',
                     link: '/vue/public/events',
                     button: 'Lär mer'
                 }, {
