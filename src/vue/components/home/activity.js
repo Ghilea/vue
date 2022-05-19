@@ -7,7 +7,7 @@ export default {
                 {
                     title: 'Slappna av och ladda om',
                     describe: "Den kyliga atmosfären i Karibien är den perfekta platsen att fräscha upp och förnya dig själv. Naturligtvis är det ett måste att sola sig på vilken strand som helst. Det finns många möjligheter att snorkla bland färgglada revfiskar på varje ö. Upptäck Bonaires saltslätter och flamingos medan du tar lite strandtid. Res till några av St. Thomas mest hisnande utsiktspunkter och natursköna utsikter på en fantastisk ö-tur.",
-                    img: './assets/image/home/relax.jpg'
+                    img: '@img/home/relax.jpg'
                 },
                 {
                     title: 'Familjeäventyr',
