@@ -23,8 +23,8 @@ export default {
                     button: 'Lär mer'
                 }, {
                     class: 'booking',
-                    name: 'Rum',
-                    describe: 'Njut av utsikten',
+                    name: 'Bokningar',
+                    describe: 'Missa inte att boka',
                     link: '/vue/public/booking',
                     button: 'Lär mer'
                 }
