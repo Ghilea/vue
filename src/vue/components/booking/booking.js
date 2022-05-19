@@ -42,7 +42,7 @@ export default {
                 <h1>
                     Här hittar du alla våra bokningsbara aktiviteter.
                 </h1>
-                <p>Välkommen till vår bokningssida! <br/>
+                <p class="info">Välkommen till vår bokningssida! <br/>
                     Reser du ensam, med familj eller i par? Vi har olika hytter för dina önskemål. <br/>
                     Vill du även säkra din plats i resturangen kan du boka din plats redan nu. <br/>
                     Och om ni vill lyxa till det mer har vi även spabehandlingar ni kan förboka, <br/>
