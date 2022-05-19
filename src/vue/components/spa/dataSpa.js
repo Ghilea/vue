@@ -1,4 +1,12 @@
 export const spaTreatments = [{
+    hide: false,
+    treatment: [{
+            describe: 'Välkommen till vårt spa, ett modernt spa placerat på våning 3. Här finner du ett brett utbud av behandlingar för ansikte och kropp, en relaxpool (in- & utomhusdel) med en slående utsikt över havet samt ång- och torrbastu.  Det ingår lån av morgonrock, tofflor och handduk och vi bjuder även på te och frukt. I vår Spabar finns allt från matiga rätter till snacks, hälsodrinkar och alkoholhaltiga drycker. Se till att boka din plats i tid för att säkra din behandling. Välkommen!',
+            aside: 0,
+            hide: false
+        },
+    ]
+},{
     title: 'ANSIKTSBEHANDLINGAR',
     hide: false,
     treatment: [{
