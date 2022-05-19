@@ -24,7 +24,7 @@ export const events = [{
     },{
         title: 'Att göra under resan.',
         hide: false,
-        treatment: [{
+        todos: [{
                 name: 'Gym',
                 describe: '',
                 time:'',
