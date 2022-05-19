@@ -26,9 +26,10 @@ export const store = createStore({
             resturantModal: false,
             spaModal: false,
             roomModal: false,
-            restaurantBooking: "",
-            roomBooking: "",
-            spaBooking: ""
+            restaurantBooking: [],
+            roomBooking: [],
+            spaBooking: [],
+            totalSeat: 12
         }
     }
 })

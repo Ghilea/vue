@@ -16,6 +16,17 @@ export default {
                 store.state.showChat = false;
             }
         },
+        showBookings() {
+            const bookOutput = document.querySelector('.bookOutp');
+
+
+            bookOutput.innerHTML += '<strong>Restaurangbokningar <strong/>' + '<br/>' + store.state.restaurantBooking + '<br/><hr/>';
+
+            bookOutput.innerHTML += '<strong>Bokade rum <strong/>' +  '<br/>' + store.state.roomBooking + '<br/><hr/>';
+
+            bookOutput.innerHTML += '<strong>Bokad spa <strong/>' +  '<br/>' + store.state.spaBooking + '<br/><hr/>';
+
+        },
         sendMessage() {
             const mess = document.querySelector('.input');
             const chatOutput = document.querySelector('.chatOutp');
@@ -35,7 +46,7 @@ export default {
             store.state.websocket = ws;
             ws.addEventListener("open", () => {
                 //console.log("We are connected");
-                });
+            });
         },
         sendAdminMessage() {
             const adminMess = document.querySelector('.admin-input');
@@ -50,7 +61,7 @@ export default {
         }
     },
     mounted() {
-        this.checkWebsocket()
+        this.checkWebsocket();
     },
 
     render() {
@@ -76,10 +87,10 @@ export default {
         return (
             <div class="chat" v-show={store.state.showChat}>
                 <div class="adminChat" v-show={store.state.showAdminChat}>
-                <div class="admin-input-group">
-                    <input required type="text" name="text" autocomplete="off" class="admin-input"/>
+                    <div class="admin-input-group">
+                        <input required type="text" name="text" autocomplete="off" class="admin-input" />
                         <label class="admin-user-label">Svara kund</label>
-                </div>
+                    </div>
                     <div class="adminChatOutput"></div>
                     <button class="adminBtn" onClick={() => this.sendAdminMessage()}>Skicka</button>
                 </div>
@@ -88,14 +99,16 @@ export default {
                 <div class="closeChatBtn" onClick={() => store.state.showChat = false}>
                 </div>
                 <div class="input-group">
-                    <input required type="text" name="text" autocomplete="off" class="input"/>
-                        <label class="user-label">Har du någon fråga?</label>
+                    <input required type="text" name="text" autocomplete="off" class="input" />
+                    <label class="user-label">Har du någon fråga?</label>
                 </div>
                 <button class="btn" onClick={() => this.sendMessage()}>Skicka</button>
                 <div class="chatOutp"></div>
                 <h1>
                     {this.bokningar}
                 </h1>
+                <div class="bookOutp"></div>
+                <button class="btn" onClick={() => this.showBookings()}>Bokningar</button>
             </div>
         )
     }
