@@ -31,8 +31,16 @@ export default {
                 activity: 'Event: ',
                 room : 'Antal rum kvar: ',
                 restaurant: 'Antal platser i restaurangen: '
-            }
+            },
+            events: [
+                'Swingersträff',
+                'Dansband',
+                'Show'
+            ]
         }
+    },
+    mounted() {
+        store.state.activeEvents = this.events[Math.floor(Math.random() * this.events.length)]
     },
     render() {
 
@@ -74,6 +82,9 @@ export default {
                         <li>
                             {
                                 this.bookings.room
+                            }
+                            {
+                                store.state.totalBooking
                             }
                         </li>
                         <li>

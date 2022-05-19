@@ -27,6 +27,7 @@ export const store = createStore({
             spaModal: false,
             roomModal: false,
             restaurantBooking: [],
+            totalBooking: 25,
             roomBooking: [],
             spaBooking: [],
             totalSeat: 12,
