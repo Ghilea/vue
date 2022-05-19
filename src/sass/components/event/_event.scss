@@ -1,0 +1,72 @@
+.row{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-top: 1em;
+    margin-bottom: 6em;
+    gap: 1em;
+    align-items: center;
+    /* border: 2px inset rgba(79,79,79,0.09); */
+    
+    .column{
+    display: flex;
+    width: 40vw;
+    
+    
+    }
+} 
+    h1{
+        margin: 1.9em;
+        text-align: center;
+        font-family: "Palatino Linotype", "Book Antiqua", serif;
+        font-size: 1.6rem; 
+        letter-spacing: 0.6px;
+        word-spacing: 0.4px;
+        color: #000000;
+        font-weight: 400;
+        text-decoration: overline solid rgb(68, 68, 68);
+        font-style: italic;
+        font-variant: normal;
+        text-transform: uppercase;
+    }
+    .p-name{
+       
+        font-family: "Palatino Linotype", "Book Antiqua", serif;
+        font-size: 1.3rem;
+        letter-spacing: 0.6px;
+        word-spacing: 0.4px;
+        color: #000000;
+        font-weight: 400;
+        font-style: italic;
+        font-variant: normal;
+        text-transform: uppercase;      
+   }
+   .p-describe{
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-size: 1rem;
+        letter-spacing: 0.4px;
+        word-spacing: 0.4px;
+        color: #000000;
+        font-weight: 400;
+        text-decoration: none solid rgb(68, 68, 68);
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+    }
+    .container {
+        width: 100%; 
+        margin: 1em 0 !important;
+        gap: 1em !important;
+    }        
+    .container img {
+        position: relative;
+        min-width: 20em;
+        width: 30%;
+        min-height: 20em;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 0 5px #000;
+    }
