@@ -1,6 +1,5 @@
 import { spaTreatments } from './dataSpa';
 
-
 export default {
     data(){
         return{
@@ -8,7 +7,6 @@ export default {
             imgFooter:[{link:'./assets/image/spa-5.jpg'},{link:'./assets/image/sauna.jpg'},{link:'./assets/image/Fisk-spa.jpg'}]
                
         }
-
     },
     methods: {
        spaT() {
@@ -41,8 +39,11 @@ export default {
                 </div>
             )
         })
-    }
-},
+
+        return spa;
+       }
+         
+    },
     render() {
         
         const imgHeader = this.imgHeader.map((item) => {
