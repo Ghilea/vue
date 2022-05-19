@@ -1,7 +1,14 @@
-import { spaTreatments } from '../data';
+import { spaTreatments } from './dataSpa';
 
 
 export default {
+    data(){
+        return{
+            imgHeader:[{link:'./assets/image/ansiktsbehandling.jpg'},{link:'./assets/image/massage.jpg'},{link:'./assets/image/'}],
+            imgFooter:[{link:'./assets/image/'},{link:'./assets/image/'},{link:'./assets/image/'}]
+               
+        }
+    },
     methods: {
        spaT() {
         const spa = spaTreatments.map((item) => {
@@ -40,9 +47,24 @@ export default {
     },
     render() {
         
-
+        const imgHeader = this.imgHeader.map((item) => {
+            return(
+                <img src={item.link} />
+            )
+        })
+        const imgFooter = this.imgFooter.map((item) => {
+            return(
+                <img src={item.link} />
+            )
+        })
         return (
-            <div>{this.spaT()}</div>
+            
+            <div>
+                {imgHeader}
+                {this.spaT()}
+                {imgFooter}
+            </div>
+            
         )
         
     }             
