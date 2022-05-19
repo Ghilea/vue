@@ -1,5 +1,6 @@
 import dish_main from '../dishes/dish_main';
 import { store } from '../store';
+import showbokings from './showbokings';
 
 export default {
     data() {
@@ -15,17 +16,6 @@ export default {
             if (!chat.contains(event.target)) {
                 store.state.showChat = false;
             }
-        },
-        showBookings() {
-            const bookOutput = document.querySelector('.bookOutp');
-
-
-            bookOutput.innerHTML += '<strong>Restaurangbokningar <strong/>' + '<br/>' + store.state.restaurantBooking + '<br/><hr/>';
-
-            bookOutput.innerHTML += '<strong>Bokade rum <strong/>' +  '<br/>' + store.state.roomBooking + '<br/><hr/>';
-
-            bookOutput.innerHTML += '<strong>Bokad spa <strong/>' +  '<br/>' + store.state.spaBooking + '<br/><hr/>';
-
         },
         sendMessage() {
             const mess = document.querySelector('.input');
@@ -107,8 +97,7 @@ export default {
                 <h1>
                     {this.bokningar}
                 </h1>
-                <div class="bookOutp"></div>
-                <button class="btn" onClick={() => this.showBookings()}>Bokningar</button>
+                <showbokings/>
             </div>
         )
     }
