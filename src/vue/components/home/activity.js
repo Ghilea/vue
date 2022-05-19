@@ -1,22 +1,22 @@
 export default {
     data() {
         return {
-            title: 'Unforgettable Shore Excursions',
-            describe: 'There’s a variety of ways to explore your ports of call. Whether you’re a parent looking for family entertainment, a foodie out to explore local dishes and wines, or a history buff, we have a Caribbean cruise excursion tailored to your interests.',
+            title: 'Oförglömliga strandutflykter',
+            describe: 'Det finns en mängd olika sätt att utforska dina anlöpshamnar. Oavsett om du är en förälder som letar efter familjeunderhållning, en matgäst för att utforska lokala rätter och viner, eller en historiefantast, har vi en karibisk kryssningsutflykt skräddarsydd för dina intressen.',
             content: [
                 {
-                    title: 'Relax & Recharge',
-                    describe: "The chill vibe of the Caribbean is the perfect place to refresh and renew yourself. Of course, basking on any beach is a must-do. There are many opportunities to snorkel among colorful reef fish on every island. Discover Bonaire’s salt flats and flamingoes as you catch some beach time. Journey to some of St. Thomas's most breathtaking viewpoints and scenic overlooks on a stunning island drive.",
+                    title: 'Slappna av och ladda om',
+                    describe: "Den kyliga atmosfären i Karibien är den perfekta platsen att fräscha upp och förnya dig själv. Naturligtvis är det ett måste att sola sig på vilken strand som helst. Det finns många möjligheter att snorkla bland färgglada revfiskar på varje ö. Upptäck Bonaires saltslätter och flamingos medan du tar lite strandtid. Res till några av St. Thomas mest hisnande utsiktspunkter och natursköna utsikter på en fantastisk ö-tur.",
                     img: './assets/image/home/relax.jpg'
                 },
                 {
-                    title: 'Family Adventures',
-                    describe: "Board a traditional schooner on a fun pirate journey along the breathtaking coast of St. Vincent. Hike through a verdant rainforest or climb a dormant volcano in St. Kitts. Swim with docile stingrays in waters off Grand Cayman. Journey into the depths of underwater Aruba aboard an Atlantis submarine. Travel to St. Thomas' Coral World Ocean Park for a ride past coral gardens and tropical fish aboard an eight-foot semi-submersible vessel.",
+                    title: 'Familjeäventyr',
+                    describe: "Gå ombord på en traditionell skonare på en rolig piratresa längs St. Vincents hisnande kust. Vandra genom en grönskande regnskog eller bestiga en vilande vulkan i St. Kitts. Simma med fogliga stingrockor i vattnet utanför Grand Cayman. Res in i djupet av Aruba under vattnet ombord på en Atlantis-ubåt. Res till St. Thomas' Coral World Ocean Park för en tur förbi korallträdgårdar och tropiska fiskar ombord på ett åtta fots halvt nedsänkbart fartyg.",
                     img: './assets/image/home/family.jpg'
                 },
                 {
-                    title: 'Culture',
-                    describe: "Journey beneath the earth on an adventure through Harrison’s Cave with limestone formations, bubbling streams, and waterfalls in Barbados. Explore the fascinating fortresses and history of San Juan’s walled city. Enjoy a Chef’s Market Discovery℠ with a shipboard chef as you source ingredients in Castries on St. Lucia and then enjoy a private dinner back onboard your ship.",
+                    title: 'Kultur',
+                    describe: "Resa under jorden på ett äventyr genom Harrisons grotta med kalkstensformationer, bubblande bäckar och vattenfall i Barbados. Utforska de fascinerande fästningarna och historien om San Juans muromgärdade stad. Njut av en Chef's Market Discovery℠ med en kock ombord när du köper ingredienser i Castries på St. Lucia och njut av en privat middag ombord på ditt skepp.",
                     img: './assets/image/home/culture.jpg'
                 }
            ]

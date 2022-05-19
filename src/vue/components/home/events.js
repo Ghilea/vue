@@ -1,8 +1,8 @@
 export default {
     data() {
         return {
-            title: 'INCREDIBLE IS ON THE ITINERARY',
-            describe: 'Whatever thrills you seek, you’ll find all sorts of ways to fill your days onboard Royal Caribbean®. Each day and night brings something new to do, see and explore. From the robot mixologists at Bionic Bar® to the FlowRider® surf simulators, and the tallest slide at sea, Ultimate Abyss℠, to hit Broadway musicals like Grease. And with the award-winning Adventure Ocean® youth program, kids and teens will have a blast— plus parents can get a little time of their own. The hardest part is deciding where to start.',
+            title: 'Vad du än gillar',
+            describe: 'Oavsett vilken spänning du söker hittar du alla möjliga sätt att fylla dina dagar ombord på Royal Caribbean®. Varje dag och natt ger något nytt att göra, se och utforska. Från robotmixologerna på Bionic Bar® till FlowRider® surfsimulatorerna och den högsta rutschkanan till sjöss, Ultimate Abyss℠, till Broadwaymusikaler som Grease. Och med det prisbelönta ungdomsprogrammet Adventure Ocean® kommer barn och tonåringar att trivas – plus att föräldrar kan få lite egen tid. Det svåraste är att bestämma var man ska börja.',
             content: [
                 {
                     title: 'Shower & underhållning',

@@ -1,8 +1,8 @@
 export default {
     data() {
         return {
-            title: 'It’s not a stateroom, it’s home away from home for your adventure.',
-            describe: 'Humble abode? More like humble brag. We’ve designed our cruise rooms with every type of guest in mind. From families and couples to groups of friends and solo travelers — the options are almost endless, and the comfort is always guaranteed.',
+            title: 'Det är inte ett hytt, det är ett hem hemifrån för ditt äventyr.',
+            describe: 'Ödmjuka boning? Mer som ödmjuk skryt. Vi har designat våra kryssningsrum med alla typer av gäster i åtanke. Från familjer och par till grupper av vänner och ensamresenärer - alternativen är nästan oändliga, och komforten är alltid garanterad.',
             img: './assets/image/home/room.jpg'
         }
     },    
