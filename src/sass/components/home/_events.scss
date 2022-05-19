@@ -1,26 +1,28 @@
-.food {
+.events {
     height: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    margin: 10em 0 0 0;
-    background-image: url(../assets/image/home/food_wallpaper.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    margin: 10em 0;
     
     header {
         display:flex;
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
-        margin: 10em 0;
-        color: #fff;
+        margin-bottom: 10em;
 
         h2 {
-            text-shadow: 0 0 5px #000;
             font-size: 2rem;
+        }
+
+        p {
+            position: unset;
+            font-size: 1.2rem;
+            transform: unset;
+            margin: 2em;
+            max-width: 1000px;
         }
     }
 
@@ -32,7 +34,6 @@
         width: 100%;
         gap: 1em;
         justify-content: center;
-        margin-bottom: 10em;
 
         .imgCard {
             position: relative;
@@ -44,22 +45,10 @@
             flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
-            box-shadow: 0 0 5px rgb(255 255 255 / 50%);
-            backdrop-filter: blur(5px);
-            border-radius: 1em;
+            box-shadow: 0 0 5px #000;
 
             h2 {
                 color: #fff;
-                text-shadow: 0 0 10px #000;
-                margin: 0;
-                font-size: 1.5rem;
-            }
-
-            p {
-                color: #fff;
-                padding: 0 2em;
-                letter-spacing: 0.1em;
-                line-height: 1.5em;
                 text-shadow: 0 0 10px #000;
             }
 
@@ -81,6 +70,13 @@
                 }
             }
 
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1;
+            }
         }
     }
 }

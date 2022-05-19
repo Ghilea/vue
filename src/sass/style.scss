@@ -1,4 +1,5 @@
 //misc
+@use './components/misc/reset';
 @use './components/misc/main';
 @use './components/misc/checkout';
 
@@ -24,6 +25,8 @@
 @use './components/home/activity';
 @use './components/home/explore';
 @use './components/home/food';
+@use './components/home/room';
+@use './components/home/events';
 
 //spa
 @use './components/spa/spa';
