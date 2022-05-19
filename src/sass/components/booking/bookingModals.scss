@@ -28,11 +28,13 @@
     width: 2em;
     height: 2em;
     border-radius: 50%;
+    border: none;
     box-shadow: 0 0 0.4em #00000029;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.5s all;
+    background-color: white;
 
     &::before {
         content: 'X';
@@ -62,7 +64,7 @@
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 
     &:hover {
-        filter: blur(2px)
+        filter: blur(1px)
     }
 }
 

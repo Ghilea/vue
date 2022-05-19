@@ -4,8 +4,8 @@ import { spaTreatments } from './dataSpa';
 export default {
     data(){
         return{
-            imgHeader:[{link:'./assets/image/ansiktsbehandling.jpg'},{link:'./assets/image/massage.jpg'},{link:'./assets/image/'}],
-            imgFooter:[{link:'./assets/image/'},{link:'./assets/image/'},{link:'./assets/image/'}]
+            imgHeader:[{link:'./assets/image/massage.jpg'},{link:'./assets/image/ansiktsbehandling.jpg'},{link:'./assets/image/manikyr.jpg'}],
+            imgFooter:[{link:'./assets/image/spa-5.jpg'},{link:'./assets/image/sauna.jpg'},{link:'./assets/image/Fisk-spa.jpg'}]
                
         }
     },
@@ -60,9 +60,15 @@ export default {
         return (
             
             <div>
-                {imgHeader}
+                <div class="container">
+                    {imgHeader}
+                </div>
+
                 {this.spaT()}
+
+                <div class ="container">
                 {imgFooter}
+                </div>
             </div>
             
         )
