@@ -53,4 +53,22 @@
         font-variant: normal;
         text-transform: none;
     }
+    .container {
+        width: 100%; 
+        margin: 1em 0 !important;
+        gap: 1em !important;
+    }        
+    .container img {
+        position: relative;
+        min-width: 20em;
+        width: 30%;
+        min-height: 20em;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 0 5px #000;
+    }
+   
     
