@@ -1,103 +1,63 @@
 export default {
     data() {
         return {
-            spa: {
-                name: 'Spa',
-                describe: 'En underbar upplevese'
-            },
-            event: {
-                name: 'Swingersklubbar',
-                describe: 'Njut'
-            },
-            restaurant: {
-                name: 'Restaurang',
-                describe: 'En smakfull kväll'
-            },
-            booking: {
-                name: 'Rum',
-                describe: 'Njut av utsikten'
-            }
-
+            title: 'Välkommen till att njuta i lyx',
+            cards: [
+                {
+                    class: 'spa',
+                    name: 'Spa',
+                    describe: 'En underbar upplevese',
+                    link: '/vue/public/spa',
+                    button: 'Lär mer'
+                }, {
+                    class: 'event',
+                    name: 'Swingersklubbar',
+                    describe: 'Njut',
+                    link: '/vue/public/events',
+                    button: 'Lär mer'
+                }, {
+                    class: 'restaurant',
+                    name: 'Restaurang',
+                    describe: 'En smakfull kväll',
+                    link: '/vue/public/restaurant',
+                    button: 'Lär mer'
+                }, {
+                    class: 'booking',
+                    name: 'Rum',
+                    describe: 'Njut av utsikten',
+                    link: '/vue/public/booking',
+                    button: 'Lär mer'
+                }
+            ]
         }
     },
-    methods: {
-      
-    },
-    beforeMount() {
-   
-    },
     render() {
+
+        const cards = this.cards.map((item) => {
+            return (
+                <div class={item.class}>
+                    <div div class='front'>
+                        <div class='inner'>
+                            <h2>{item.name}</h2>
+                            <p>{item.describe}</p> 
+                        </div>
+                    </div>
+                    <router-link to = {item.link}>
+                    <div class='back'>
+                        <div class='inner'>
+                            <h2>{item.button}</h2>
+                        </div>
+                    </div>
+                    </router-link>
+                </div>
+            )
+        })
+
         return (
             <div class='cards'>
-                <h1>Välkommen till att njuta i lyx</h1>
+                <h1>{this.title}</h1>
                 <div class='flexIt'>
-                    <div class='spa'>
-
-                        <div div class='front'>
-                            <div class='inner'>
-                                <h2>{this.spa.name}</h2>
-                                <p>{this.spa.describe}</p> 
-                            </div>
-                        </div>
-                        <router-link to = '/vue/public/spa'>
-                        <div class='back'>
-                            <div class='inner'>
-                                <h2>Back</h2>
-                            </div>
-                        </div>
-                        </router-link>
-                    </div>
-                    <div class='event'>
-
-                        <div div class='front'>
-                            <div class='inner'>
-                                <h2>{this.event.name}</h2>
-                                <p>{this.event.describe}</p>
-                            </div>
-                        </div>
-                        <router-link to='/vue/public/events'>
-                        <div class='back'>
-                            <div class='inner'>
-                                <h2>Back</h2>
-                            </div>
-                        </div>
-                        </router-link>
-
-                    </div>
-                    <div class='restaurant'>
-
-                        <div div class='front'>
-                            <div class='inner'>
-                                <h2>{this.restaurant.name}</h2>
-                                <p>{this.restaurant.describe}</p>
-                            </div>
-                        </div>
-                        <router-link to='/vue/public/restaurant'>
-                        <div class='back'>
-                            <div class='inner'>
-                                <h2>Back</h2>
-                            </div>
-                        </div>
-                        </router-link>
-
-                    </div>
-                    <div class='booking'>
-
-                        <div div class='front'>
-                            <div class='inner'>
-                                <h2>{this.booking.name}</h2>
-                                <p>{this.booking.describe}</p>
-                            </div>
-                        </div>
-                        <router-link to='/vue/public/booking'>
-                        <div class='back'>
-                            <div class='inner'>
-                                <h2>Back</h2>
-                            </div>
-                        </div>
-                        </router-link>
-
-                    </div>
+                    {cards}
                 </div>
             </div>
         )
