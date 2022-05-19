@@ -28,11 +28,13 @@
     width: 2em;
     height: 2em;
     border-radius: 50%;
+    border: none;
     box-shadow: 0 0 0.4em #00000029;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.5s all;
+    background-color: white;
 
     &::before {
         content: 'X';
