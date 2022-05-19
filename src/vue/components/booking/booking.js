@@ -40,23 +40,23 @@ export default {
             <div class="booking">
                <button class="bookButton" onClick={() => store.state.restaurantModal = true}>Boka Resturang</button>
                <div class="restaurantModal" v-show={store.state.restaurantModal}>
-                   <button onClick={() => store.state.restaurantModal = false}>Close</button>
+                   <button class="closeBtn" onClick={() => store.state.restaurantModal = false}></button>
                    Resturang
                    <input class="resDate" type="date" placeholder="Vilken dag?"/>
                    <input class="resTime" type="time" placeholder="Vilken tid"/>
-                   <button class="bookRestaurant" onClick={() => this.restaurantBook()}>Skicka</button>
+                   <button class="bookBtn" onClick={() => this.restaurantBook()}>Skicka</button>
                </div>
                <button class="bookButton" onClick={() => store.state.roomModal = true}>Boka Rum</button>
                <div class="roomModal" v-show={store.state.roomModal}>
-               <button onClick={() => store.state.roomModal = false}>Close</button>
+               <button class="closeBtn" onClick={() => store.state.roomModal = false}></button>
                    Rum
                    <input class="roomDateArr" type="date" placeholder="Ankomstag"/>
                    <input class="roomDateDep" type="date" placeholder="När lämnar du oss?"/>
-                   <button onClick={() => this.roomBook()}>Skicka</button>
+                   <button class="bookBtn" onClick={() => this.roomBook()}>Skicka</button>
                </div>
                <button class="bookButton" onClick={() => store.state.spaModal = true}>Boka Spa</button>
                <div class="spaModal" v-show={store.state.spaModal}>
-               <button onClick={() => store.state.spaModal = false}>Close</button>
+               <button class="closeBtn" onClick={() => store.state.spaModal = false}></button>
                     Spa
                     <input class="spaDate" type="date" placeholder="Välj dag"/>
                    <select class="spaType">
@@ -77,7 +77,7 @@ export default {
                        <option class="opt15">Garra ruffa</option>
                        <option class="opt16">Inpackning</option>
                    </select>
-                   <button onClick={() => this.spaBook()}>Skicka</button>
+                   <button class="bookBtn" onClick={() => this.spaBook()}>Skicka</button>
                 </div> 
             </div>
         )
