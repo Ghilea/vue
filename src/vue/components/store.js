@@ -21,7 +21,17 @@ export const store = createStore({
             showCart: false,
             showChat: false,
             orders: [],
-            websocket: ""
+            websocket: "",
+            adminChat: false,
+            resturantModal: false,
+            spaModal: false,
+            roomModal: false,
+            restaurantBooking: [],
+            totalBooking: 25,
+            roomBooking: [],
+            spaBooking: [],
+            totalSeat: 12,
+            activeEvents: []
         }
     }
 })

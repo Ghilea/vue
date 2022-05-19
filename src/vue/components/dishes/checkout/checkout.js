@@ -1,5 +1,4 @@
-import dish_main from '../dishes/dish_main';
-import { store } from '../store';
+import { store } from '../../store';
 
 export default {
     data() {
@@ -57,6 +56,7 @@ export default {
         });
 
         return (
+            <>
             <div class="cart" v-show={store.state.showCart}>
                 <h1>{this.title}</h1>
                 <p>{store.state.totalCost} kr</p>
@@ -64,6 +64,16 @@ export default {
                 <div class="closeCartButton" onClick={() => store.state.showCart = false}>
                 </div>
             </div>
+            <div class = "headerMeny"
+            onClick = {
+                () => store.state.showCart = true
+            } >
+                <a class="showCartButton" > 
+                    <i class="fa-solid fa-cart-arrow-down"></i> 
+                </a>
+                {store.state.totalCost} kr
+            </div>
+            </>
         )
     }
 };

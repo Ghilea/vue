@@ -1,7 +1,7 @@
 import { store } from "../store";
 import Weather from "./weather";
 import DateTime from "./dateTime";
-import Cards from '../cards';
+import Cards from './cards';
 
 export default {
     data() {
@@ -14,13 +14,14 @@ export default {
  
         return (
             <header class={`navbar ${ (store.state.menu_selected === 'barn') ? 'childpicture' : (store.state.menu_selected === 'par') ? 'couplepicture' : '' }`}>
-                <div class="logo">
-                    <img src={this.img}/>
-                    <p>{this.name}</p>
-                </div>
+                <router-link to='/vue/public/'>
+                    <div class="logo">
+                        <img src={this.img}/>
+                        <p>{this.name}</p>
+                    </div>
+                </router-link>
                 <Cards />
                 <DateTime />
-                <Weather />
             </header>
         )
        

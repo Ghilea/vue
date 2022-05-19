@@ -1,0 +1,86 @@
+.food {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10em 0 0 0;
+    background-image: url(../assets/image/home/food_wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    header {
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 10em 0;
+        color: #fff;
+
+        h2 {
+            text-shadow: 0 0 5px #000;
+            font-size: 2rem;
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 1em 0;
+        width: 100%;
+        gap: 1em;
+        justify-content: center;
+        margin-bottom: 10em;
+
+        .imgCard {
+            position: relative;
+            min-width: 20em;
+            width: 30%;
+            min-height: 20em;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 0 5px rgb(255 255 255 / 50%);
+            backdrop-filter: blur(5px);
+            border-radius: 1em;
+
+            h2 {
+                color: #fff;
+                text-shadow: 0 0 10px #000;
+                margin: 0;
+                font-size: 1.5rem;
+            }
+
+            p {
+                color: #fff;
+                padding: 0 2em;
+                letter-spacing: 0.1em;
+                line-height: 1.5em;
+                text-shadow: 0 0 10px #000;
+            }
+
+            button {
+                width: 10em;
+                height: 3em;
+                background-color: rgb(255 255 255 / 0%);
+                color: #fff;
+                text-shadow: 0 0 10px #000;
+                border: 1px solid #fff;
+                font-size: 1rem;
+                transition: 1s all;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgb(255 255 255 / 100%);
+                    color: #000;
+                    text-shadow: 0 0 10px rgb(255, 255, 255);
+                }
+            }
+
+        }
+    }
+}

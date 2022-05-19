@@ -1,3 +1,4 @@
+import { store } from '../store';
 
 export default {
     data() {
@@ -27,13 +28,19 @@ export default {
                },
             bookings: {
                 title: 'Bokningar',
-                describe: [
-                    'Antal bokningar båten: 3',
-                    'Platser kvar på resturangen: 10',
-                    'Spabokningar: 4'
-                ]
-            }
+                activity: 'Event: ',
+                room : 'Antal rum kvar: ',
+                restaurant: 'Antal platser i restaurangen: '
+            },
+            events: [
+                'Swingersträff',
+                'Dansband',
+                'Show'
+            ]
         }
+    },
+    mounted() {
+        store.state.activeEvents = this.events[Math.floor(Math.random() * this.events.length)]
     },
     render() {
 
@@ -41,10 +48,6 @@ export default {
             return <a href="#"><p>{item}</p></a>
         })
         const contactArray = this.contact.describe.map((item) => {
-            return <p>{item}</p>
-        })
-
-        const bookingsArray = this.bookings.describe.map((item) => {
             return <p>{item}</p>
         })
 
@@ -67,7 +70,32 @@ export default {
                 </section>
                 <section>
                     <h2>{this.bookings.title}</h2>
-                    {bookingsArray}
+                    <ul>
+                        <li>
+                            {
+                                this.bookings.activity
+                            }
+                            {
+                                store.state.activeEvents
+                            }
+                        </li>
+                        <li>
+                            {
+                                this.bookings.room
+                            }
+                            {
+                                store.state.totalBooking
+                            }
+                        </li>
+                        <li>
+                            {
+                                this.bookings.restaurant
+                            }
+                            {
+                                store.state.totalSeat
+                            }
+                        </li>
+                    </ul>
                 </section>
             </footer>
         )

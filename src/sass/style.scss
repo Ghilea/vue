@@ -1,13 +1,35 @@
-@use './components/main';
-@use './components/menu';
-@use './components/children';
-@use './components/header';
-@use './components/cartButton';
-@use './components/footer';
-@use './components/_checkout';
-@use './components/couple';
-@use './components/chat';
-@use './components/weather';
-@use './components/dateTime';
-@use './components/cards';
-@use './components/spa';
+//misc
+@use './components/misc/reset';
+@use './components/misc/main';
+@use './components/misc/checkout';
+
+//header
+@use './components/header/header';
+@use './components/header/cards';
+@use './components/header/weather';
+@use './components/header/dateTime';
+@use './components/header/cartButton';
+
+//booking
+@use './components/booking/bookingModals.scss';
+
+//chat
+@use './components/chat/chat';
+
+//restaurant
+@use './components/restaurant/dish/menu';
+@use './components/restaurant/dish/children';
+@use './components/restaurant/dish/couple';
+
+//home
+@use './components/home/activity';
+@use './components/home/explore';
+@use './components/home/food';
+@use './components/home/room';
+@use './components/home/events';
+
+//spa
+@use './components/spa/spa';
+
+//footer
+@use './components/footer/footer';

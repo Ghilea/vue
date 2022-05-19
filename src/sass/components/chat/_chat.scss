@@ -1,0 +1,179 @@
+.chat{
+    display: flex;
+    background-color: #ffffff;
+    min-width: 15em;
+    width: 35vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0 0 1em 0 #000;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1em;
+
+    .closeChatBtn {
+        position: absolute;
+        left: 1em;
+        top: 1em;
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        box-shadow: 0 0 0.4em #00000029;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s all;
+
+        &::before {
+            content: 'X';
+            display:flex;
+            color: red;
+            font-weight: 600;
+        }
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+            box-shadow: 0 0 0.4em #000000a2;
+        }
+
+    }
+
+    h1 {
+        margin-top: 3em;
+    }
+
+    .btn, .adminBtn {
+        background-color: #198d9a;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    
+        &:hover {
+            filter: blur(1px)
+        }
+    }
+
+    .showAdminChat {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 6px 14px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+        border-radius: 6px;
+        color: #3D3D3D;
+        background: #fff;
+        border: none;
+        box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+        user-select: none;
+        touch-action: manipulation;
+
+        .showAdminChat:focus {
+            box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+            outline: 0;
+          }
+    }
+    .input, .admin-input{
+        border: solid 1.5px #9e9e9e;
+       border-radius: 1rem;
+       background: none;
+       margin-top: 2em;
+       padding: 1rem;
+       font-size: 1rem;
+       color: #c0b9b9;
+       transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+        
+        &-group{
+         position: relative;
+      }
+        &:focus, &:valid{
+          outline: none;
+       border: 1.5px solid #1a73e8;
+        }
+      }
+      
+      .input:focus ~ label,  .admin-input ~ label, input:valid ~ label {
+       transform: translateY(-50%) scale(0.8);
+       padding: 0 .2em;
+       background-color: white;
+       color: #c0b9b9;
+      }
+      
+      .user-label {
+       position: absolute;
+       margin-top: 2em;
+       left: 15px;
+       color: #c0b9b9;
+       pointer-events: none;
+       transform: translateY(1rem);
+       transition: 150ms cubic-bezier(0.4,0,0.2,1);
+      }
+      .admin-user-label {
+        position: absolute;
+        margin-top: 2em;
+        left: 15px;
+        color: #c0b9b9;
+        pointer-events: none;
+        transform: translateY(1rem);
+        transition: 150ms cubic-bezier(0.4,0,0.2,1);
+       }
+
+       .chatOutput, .adminChatOutput {
+           text-decoration: dotted rgb(137, 135, 135);
+       }
+}
+
+.stop {
+    overflow-y: hidden;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.chatmenu {
+    display: flex;
+    gap: 3em;
+    position: fixed;
+    right: 0;
+    top: 45%;
+    transform: translateY(-50%);
+    flex-direction: column;
+    align-items: center;
+    width: 4em;
+    box-shadow: -3px 0 9px #0000004a;
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+    padding: 1em 0;
+    background-color: #fff;
+    transition: 0.5s all;
+    z-index: 1;
+    
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        box-shadow: -3px 0 9px #00000079;
+    }
+
+    .chatbtn {
+        font-size: 1.5rem;
+    } 
+}

@@ -16,29 +16,52 @@ export default {
                 store.state.showChat = false;
             }
         },
+        showBookings() {
+            const bookOutput = document.querySelector('.bookOutp');
+
+
+            bookOutput.innerHTML += '<strong>Restaurangbokningar <strong/>' + '<br/>' + store.state.restaurantBooking + '<br/><hr/>';
+
+            bookOutput.innerHTML += '<strong>Bokade rum <strong/>' +  '<br/>' + store.state.roomBooking + '<br/><hr/>';
+
+            bookOutput.innerHTML += '<strong>Bokad spa <strong/>' +  '<br/>' + store.state.spaBooking + '<br/><hr/>';
+
+        },
         sendMessage() {
             const mess = document.querySelector('.input');
             const chatOutput = document.querySelector('.chatOutp');
             const jsonMess = JSON.stringify(mess.value);
+            const adminChatOutput = document.querySelector('.adminChatOutput');
 
             console.log(mess.value);
 
             store.state.websocket.send(jsonMess);
-            chatOutput.innerHTML += mess.value + '<br/>'
-            
+            chatOutput.innerHTML += 'Du - ' + mess.value + '<br/>';
+            adminChatOutput.innerHTML += 'Kund - ' + mess.value + '<br/>';
+
         },
 
         checkWebsocket() {
             const ws = new WebSocket("ws://localhost:1234/websocket");
             store.state.websocket = ws;
             ws.addEventListener("open", () => {
-                console.log("We are connected");
-                });
+                //console.log("We are connected");
+            });
         },
+        sendAdminMessage() {
+            const adminMess = document.querySelector('.admin-input');
+            const adminChatOutput = document.querySelector('.adminChatOutput');
+            const adminJsonMess = JSON.stringify(adminMess.value);
+            const chatOutput = document.querySelector('.chatOutp');
 
+            store.state.websocket.send(adminJsonMess);
+            adminChatOutput.innerHTML += 'Du - ' + adminMess.value + '<br/>';
+            chatOutput.innerHTML += 'Admin - ' + adminMess.value + '<br/>';
+
+        }
     },
     mounted() {
-        this.checkWebsocket()
+        this.checkWebsocket();
     },
 
     render() {
@@ -63,15 +86,29 @@ export default {
 
         return (
             <div class="chat" v-show={store.state.showChat}>
+                <div class="adminChat" v-show={store.state.showAdminChat}>
+                    <div class="admin-input-group">
+                        <input required type="text" name="text" autocomplete="off" class="admin-input" />
+                        <label class="admin-user-label">Svara kund</label>
+                    </div>
+                    <div class="adminChatOutput"></div>
+                    <button class="adminBtn" onClick={() => this.sendAdminMessage()}>Skicka</button>
+                </div>
+                <button class="showAdminChat" onclick={() => store.state.showAdminChat = true}>admin</button>
                 <h1>{this.title}</h1>
                 <div class="closeChatBtn" onClick={() => store.state.showChat = false}>
                 </div>
-                <input class="input" placeholder='Chatta med oss' />
+                <div class="input-group">
+                    <input required type="text" name="text" autocomplete="off" class="input" />
+                    <label class="user-label">Har du någon fråga?</label>
+                </div>
+                <button class="btn" onClick={() => this.sendMessage()}>Skicka</button>
                 <div class="chatOutp"></div>
-                <button class="btn" onClick={() => this.sendMessage()}>knapp</button>
                 <h1>
                     {this.bokningar}
                 </h1>
+                <div class="bookOutp"></div>
+                <button class="btn" onClick={() => this.showBookings()}>Bokningar</button>
             </div>
         )
     }

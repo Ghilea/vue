@@ -1,5 +1,5 @@
-import { coupleMenu } from '../data';
 import { store } from '../store';
+import Checkout from './checkout/checkout';
 
 export default {
     methods: {
@@ -70,7 +70,10 @@ export default {
         })
 
         return (
-           <div class={`container ${(store.state.menu_selected === 'barn') ? 'childrenMenu' : (store.state.menu_selected === 'par') ? 'coupleMenu' : ''}`}>{showDishMenu}</div>
+            <>
+                <div class={`container ${(store.state.menu_selected === 'barn') ? 'childrenMenu' : (store.state.menu_selected === 'par') ? 'coupleMenu' : ''}`}>{showDishMenu}</div>
+                <Checkout />
+            </>
         )
     }
     
