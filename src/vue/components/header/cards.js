@@ -7,25 +7,25 @@ export default {
                     class: 'spa',
                     name: 'Spa',
                     describe: 'En underbar upplevese',
-                    link: '/vue/public/spa',
+                    link: 'spa',
                     button: 'Lär mer'
                 }, {
                     class: 'event',
                     name: 'Evenemang',
                     describe: 'Upptäck glädjen',
-                    link: '/vue/public/events',
+                    link: 'events',
                     button: 'Lär mer'
                 }, {
                     class: 'restaurant',
                     name: 'Restaurang',
                     describe: 'En smakfull kväll',
-                    link: '/vue/public/restaurant',
+                    link: 'restaurant',
                     button: 'Lär mer'
                 }, {
                     class: 'booking',
                     name: 'Bokningar',
                     describe: 'Missa inte att boka',
-                    link: '/vue/public/booking',
+                    link: 'booking',
                     button: 'Lär mer'
                 }
             ]
@@ -42,7 +42,7 @@ export default {
                             <p>{item.describe}</p> 
                         </div>
                     </div>
-                    <router-link to = {item.link}>
+                    <router-link to = {{name: item.link}}>
                     <div class='back'>
                         <div class='inner'>
                             <h2>{item.button}</h2>

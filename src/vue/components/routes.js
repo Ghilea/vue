@@ -6,7 +6,7 @@ import Events from '@comp/event/event';
 import Booking from '@comp/booking/booking';
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('/vue/public'),
     routes: [
         {
             path: '/',
@@ -15,7 +15,7 @@ const router = createRouter({
         },
         {
             path: '/restaurant',
-            name: 'dish',
+            name: 'restaurant',
             component: Dish
         },
         {

@@ -1,21 +1,19 @@
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader')
-const address = './src/vue/index.js';
-const output = './public/js';
 
 module.exports = {
     mode: 'development',
-    entry: address,
+    entry: './src/vue/index.js',
     output: {
-        path: path.resolve(__dirname, output),
+        publicPath: '/',
+        path: path.resolve(__dirname, './public/assets/js'),
         filename: 'bundle.js'
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'],
         alias: {
             '@': path.resolve(__dirname, 'src'),
-            '@comp': path.resolve(__dirname, 'src/vue/components'),
-            '@img': path.resolve(__dirname, 'public/assets/image')
+            '@comp': path.resolve(__dirname, 'src/vue/components')
         }
     },
     module: {

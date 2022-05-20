@@ -14,7 +14,7 @@ export default {
  
         return (
             <header class={`navbar ${ (store.state.menu_selected === 'barn') ? 'childpicture' : (store.state.menu_selected === 'par') ? 'couplepicture' : '' }`}>
-                <router-link to='/vue/public/'>
+                <router-link to = {{name: 'home'}} >
                     <div class="logo">
                         <img src={this.img}/>
                         <p>{this.name}</p>

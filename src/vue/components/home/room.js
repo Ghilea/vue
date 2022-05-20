@@ -14,7 +14,11 @@ export default {
                 <header>
                     <h2>{this.title}</h2>
                     <p>{this.describe}</p>
-                    <router-link to='/vue/public/booking'>
+                    <router-link to = {
+                        {
+                            name: 'booking'
+                        }
+                    } >
                         <button>Boka rum</button>
                     </router-link>
                 </header>

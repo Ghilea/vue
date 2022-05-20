@@ -37,7 +37,7 @@
     "scripts": {
         "start": "nodemon ./src/server/server.mjs",
         "watch": "nodemon --exec \"npm run build\"",
-        "build:sass": "sass --no-source-map ./src/sass:./public/css",
+        "build:sass": "sass --no-source-map ./src/sass:./public/assets/css",
         "copy:assets": "copyfiles -u 1 ./src/assets/**/* ./public",
         "copy:index": "copyfiles -u 1 ./src/index.html ./public",
         "copy": "npm-run-all --parallel copy:*",
