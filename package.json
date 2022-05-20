@@ -1,6 +1,5 @@
 {
     "name": "restaurangmenyn",
-    
     "dependencies": {
         "@vue/babel-helper-vue-jsx-merge-props": "1.0.0",
         "@vue/babel-preset-jsx": "1.1.2",
@@ -32,7 +31,9 @@
         "express": "4.18.1",
         "cors": "2.8.5",
         "axios": "0.27.2",
-        "vue-router": "4.0.13"
+        "vue-router": "4.0.13",
+        "chai": "*",
+        "mocha": "*"
     },
     "scripts": {
         "start": "nodemon ./src/server/server.mjs",
