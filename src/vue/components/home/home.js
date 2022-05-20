@@ -1,8 +1,8 @@
-import Activity from './activity';
-import Explore from './explore';
-import Food from './food';
-import Room from './room';
-import Events from './events';
+import Activity from '@comp/home/activity';
+import Explore from '@comp/home/explore';
+import Food from '@comp/home/food';
+import Room from '@comp/home/room';
+import Events from '@comp/home/events';
 
 export default {
     render() {

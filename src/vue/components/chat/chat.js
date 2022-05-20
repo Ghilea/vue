@@ -1,6 +1,5 @@
-import dish_main from '../dishes/dish_main';
-import { store } from '../store';
-import showbokings from './showbokings';
+import { store } from '@comp/store';
+import Showbokings from '@comp/chat/showbokings';
 
 export default {
     data() {
@@ -97,7 +96,7 @@ export default {
                 <h1>
                     {this.bokningar}
                 </h1>
-                <showbokings/>
+                <Showbokings />
             </div>
         )
     }

@@ -1,11 +1,5 @@
-import {
-    createStore
-} from 'vuex';
-import {
-    adultMenu,
-    childrenMenu,
-    coupleMenu,
-} from './data';
+import { createStore } from 'vuex';
+import { adultMenu, childrenMenu, coupleMenu } from '@comp/data';
 
 // Create a new store instance.
 export const store = createStore({

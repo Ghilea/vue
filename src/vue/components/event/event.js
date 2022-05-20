@@ -1,4 +1,4 @@
-import { events } from "./dataEvent";
+import { events } from "@comp/event/dataEvent";
 
 export default {
     data() {

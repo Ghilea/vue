@@ -1,4 +1,4 @@
-import Slots from './slots.vue';
+import Slots from '@comp/slots.vue';
 
 export default {
     data(){

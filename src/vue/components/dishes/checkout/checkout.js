@@ -1,4 +1,4 @@
-import { store } from '../../store';
+import { store } from '@comp/store';
 
 export default {
     data() {
