@@ -7,3 +7,8 @@ const currentTime = () => {
     const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`
     return date;
 }
+
+const changeValue = ()=>{
+    const current = 1*300
+    return current;
+}

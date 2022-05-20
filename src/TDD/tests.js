@@ -14,3 +14,10 @@ describe('currentTime', () => {
 
     })
 })
+
+describe('changeValue', () => {
+    it('ändra value', () => {
+        expect(changeValue()).to.deep.equal(300)
+
+    })
+})

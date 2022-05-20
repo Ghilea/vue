@@ -3,7 +3,7 @@ import { events } from "@comp/event/dataEvent";
 export default {
     data() {
         return{
-            imgH:[{link:'./assets/image/fof200811b-760x465.jpg'},{link:'./assets/image/'},{link:'./assets/image/'},{link:'./assets/image/'}],
+            imgH:[{link:'./assets/image/kinkyflamingo.jpg'},{link:'./assets/image/ericSaade.jpg'},{link:'./assets/image/'},{link:'./assets/image/'}],
             imgF:[{link:'./assets/image/'},{link:'./assets/image/'},{link:'./assets/image/'},{link:'./assets/image/'}]
                
         }
