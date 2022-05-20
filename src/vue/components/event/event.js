@@ -3,8 +3,16 @@ import { events } from "@comp/event/dataEvent";
 export default {
     data() {
         return{
-            imgH:[{link:'./assets/image/kinkyflamingo.jpg'},{link:'./assets/image/ericSaade.jpg'},{link:'./assets/image/'},{link:'./assets/image/'}],
-            imgF:[{link:'./assets/image/'},{link:'./assets/image/'},{link:'./assets/image/'},{link:'./assets/image/'}]
+            imgH:[
+            {link:'./assets/image/kinkyflamingo.jpg'},
+            {link:'./assets/image/eric_saade.png'},
+            {link:'./assets/image/carola_andersB.png'},
+            {link:'./assets/image/justin_beiber.jpg'}],
+            imgF:[
+            {link:'./assets/image/bar.jpg'},
+            {link:'./assets/image/gym.jpg'},
+            {link:'./assets/image/meditation.jpg'},
+            {link:'./assets/image/pool.webp'}]
                
         }
     },
@@ -57,13 +65,13 @@ export default {
         return (
            
                 <div>
-                    <div class="container">
+                    <div class="containerHF">
                         {imgHeader}
                     </div>
 
                     {event}
 
-                    <div class ="container">
+                    <div class ="containerHF">
                         {imgFooter}
                     </div>
                 </div>
