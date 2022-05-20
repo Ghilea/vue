@@ -5,10 +5,10 @@ import Spa from '@comp/spa/spa';
 import Events from '@comp/event/event';
 import Booking from '@comp/booking/booking';
 
-const root = '/vue/public'
+const root = '/vue'
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(root),
     routes: [
         {
             path: '/',
