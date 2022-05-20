@@ -1,37 +1,35 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Dish from './dishes/dish';
-import Home from './home/home';
-import Spa from './spa/spa';
-import Events from './event/event';
-import Booking from './booking/booking';
-
-const startPath = '/vue/public';
+import Dish from '@comp/dishes/dish';
+import Home from '@comp/home/home';
+import Spa from '@comp/spa/spa';
+import Events from '@comp/event/event';
+import Booking from '@comp/booking/booking';
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: startPath + '/',
+            path: '/',
             name: 'home',
             component: Home
         },
         {
-            path: startPath + '/restaurant',
+            path: '/restaurant',
             name: 'dish',
             component: Dish
         },
         {
-            path: startPath + '/spa',
+            path: '/spa',
             name: 'spa',
             component: Spa
         },
         {
-            path: startPath + '/events',
+            path: '/events',
             name: 'events',
             component: Events
         }, 
         {
-            path: startPath + '/booking',
+            path: '/booking',
             name: 'booking',
             component: Booking
         }

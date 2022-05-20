@@ -1,7 +1,7 @@
-import { store } from "../store";
-import Weather from "./weather";
-import DateTime from "./dateTime";
-import Cards from './cards';
+import { store } from "@comp/store";
+import Weather from "@comp/header/weather";
+import DateTime from "@comp/header/dateTime";
+import Cards from '@comp/header/cards';
 
 export default {
     data() {

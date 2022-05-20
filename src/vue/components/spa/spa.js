@@ -1,4 +1,4 @@
-import { spaTreatments } from './dataSpa';
+import { spaTreatments } from '@comp/spa/dataSpa';
 
 export default {
     data(){

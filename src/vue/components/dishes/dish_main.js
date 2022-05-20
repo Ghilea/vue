@@ -1,5 +1,5 @@
-import { store } from '../store';
-import Checkout from './checkout/checkout';
+import { store } from '@comp/store';
+import Checkout from '@comp/dishes/checkout/checkout';
 
 export default {
     methods: {

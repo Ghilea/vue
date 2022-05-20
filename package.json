@@ -38,8 +38,7 @@
         "start": "nodemon ./src/server/server.mjs",
         "watch": "nodemon --exec \"npm run build\"",
         "build:sass": "sass --no-source-map ./src/sass:./public/css",
-        "copy:assets": "copyfiles -u 1 './src/assets/**/*' ./public",
-        "copy:vue": "copyfiles -u 1 './src/vue/**/*' ./public",
+        "copy:assets": "copyfiles -u 1 ./src/assets/**/* ./public",
         "copy:index": "copyfiles -u 1 ./src/index.html ./public",
         "copy": "npm-run-all --parallel copy:*",
         "webpack": "webpack",
@@ -49,7 +48,7 @@
         "watch": [
             "./src/*"
         ],
-        "ext": "js,scss,html",
+        "ext": "js, scss, vue, html, mjs",
         "ignore": [
             "public/*"
         ],
