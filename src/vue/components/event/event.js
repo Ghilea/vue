@@ -3,7 +3,7 @@ import { events } from "./dataEvent";
 export default {
     data() {
         return{
-            imgH:[{link:'./assets/image/flamingos.jpeg'},{link:'./assets/image/'},{link:'./assets/image/'},{link:'./assets/image/'}],
+            imgH:[{link:'./assets/image/fof200811b-760x465.jpg'},{link:'./assets/image/'},{link:'./assets/image/'},{link:'./assets/image/'}],
             imgF:[{link:'./assets/image/'},{link:'./assets/image/'},{link:'./assets/image/'},{link:'./assets/image/'}]
                
         }
