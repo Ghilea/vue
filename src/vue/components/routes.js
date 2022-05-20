@@ -6,7 +6,7 @@ import Events from '@comp/event/event';
 import Booking from '@comp/booking/booking';
 
 const router = createRouter({
-    history: createWebHistory('/vue/public'),
+    history: createWebHistory(),
     routes: [
         {
             path: '/',
