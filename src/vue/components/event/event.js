@@ -2,8 +2,10 @@ import { events } from "@comp/event/dataEvent";
 
 export default {
     data() {
-        return {
-           
+        return{
+            imgH:[{link:'./assets/image/flamingos.jpeg'},{link:'./assets/image/'},{link:'./assets/image/'},{link:'./assets/image/'}],
+            imgF:[{link:'./assets/image/'},{link:'./assets/image/'},{link:'./assets/image/'},{link:'./assets/image/'}]
+               
         }
     },
     methods:{
@@ -42,10 +44,28 @@ export default {
                </div>
             )   
        })
+       const imgHeader = this.imgH.map((item) => {
+        return(
+            <img src={item.link} />
+        )
+        })
+        const imgFooter = this.imgF.map((item) => {
+            return(
+             <img src={item.link} />
+            )
+    })
         return (
            
                 <div>
+                    <div class="container">
+                        {imgHeader}
+                    </div>
+
                     {event}
+
+                    <div class ="container">
+                        {imgFooter}
+                    </div>
                 </div>
             
         )
