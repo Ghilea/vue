@@ -22,6 +22,7 @@ export default {
                 </router-link>
                 <Cards />
                 <DateTime />
+                <Weather />
             </header>
         )
        

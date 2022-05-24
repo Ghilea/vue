@@ -21,11 +21,14 @@ export const store = createStore({
             spaModal: false,
             roomModal: false,
             restaurantBooking: [],
-            totalBooking: 25,
+            totalBooking: 250,
             roomBooking: [],
             spaBooking: [],
-            totalSeat: 12,
-            activeEvents: []
+            totalSeat: 150,
+            activeEvents: [],
+            singleCabin: 100, 
+            doubleCabin: 100,
+            suite: 50
         }
     }
 })

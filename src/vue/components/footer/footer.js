@@ -30,6 +30,9 @@ export default {
                 title: 'Bokningar',
                 activity: 'Event: ',
                 room : 'Antal rum kvar: ',
+                singleCabin: 'Enkelrum: ', 
+                doubleCabin: 'Dubbelrum: ',
+                suite: 'Lyxsvit: ',
                 restaurant: 'Antal platser i restaurangen: '
             },
             events: [
@@ -85,6 +88,30 @@ export default {
                             }
                             {
                                 store.state.totalBooking
+                            }
+                            </li>
+                            <li>
+                                {
+                                    this.bookings.singleCabin
+                                }
+                            {
+                                store.state.singleCabin
+                            }
+                            </li>
+                            <li>
+                                {
+                                    this.bookings.doubleCabin
+                                }
+                            {
+                                store.state.doubleCabin
+                            }
+                            </li>
+                            <li>
+                                {
+                                    this.bookings.suite
+                                }
+                            {
+                                store.state.suite
                             }
                         </li>
                         <li>

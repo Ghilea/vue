@@ -1,4 +1,5 @@
 import { store } from "@comp/store";
+import { isReservedProp } from "@vue/shared";
 
 export default {
     data() {
@@ -20,6 +21,15 @@ export default {
         roomBook() {
             const date = document.querySelector('.roomDateArr');
             const leave = document.querySelector('.roomDateDep');
+            const roomType = document.querySelector('.roomType option:checked');
+            console.log(roomType.value);
+            if (roomType.value == '1') {
+                store.state.singleCabin -= 1;
+            } else if (roomType.value == '2') {
+                store.state.doubleCabin -= 1;
+            } else if (roomType.value == '3') {
+                store.state.suite -= 1;
+            }
 
             store.state.roomBooking.push(date.value, leave.value);
             store.state.totalBooking -= 1;
@@ -65,8 +75,13 @@ export default {
                     <div class="roomModal" v-show={store.state.roomModal}>
                         <button class="closeBtn" onClick={() => store.state.roomModal = false}></button>
                         Rum
-                        <input class="roomDateArr" type="date" placeholder="Ankomstag" />
+                        <input class="roomDateArr" type="date" placeholder="Ankomsdag" />
                         <input class="roomDateDep" type="date" placeholder="När lämnar du oss?" />
+                        <select class="roomType">
+                            <option class="opt1" value='1'>Enkelhytt</option>
+                            <option class="opt2" value='2'>Dubbelhytt</option>
+                            <option class="opt3" value='3'>Lyxsvit</option>
+                        </select>
                         <button class="bookBtn" onClick={() => this.roomBook()}>Skicka</button>
                     </div>
                     <button class="bookButton" onClick={() => store.state.spaModal = true}>Boka Spa</button>

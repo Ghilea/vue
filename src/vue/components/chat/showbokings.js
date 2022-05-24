@@ -14,6 +14,7 @@ export default {
                     <p class="bokingfat">Bokade rum </p>
                         <div>
                         {store.state.roomBooking}
+                        
                         </div>
 
                         <p class="bokingfat">Bokad spa </p>
