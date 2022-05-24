@@ -1,4 +1,4 @@
-import Slots from '@comp/slots.vue';
+import Slots from '@comp/slots/slots.vue';
 
 export default {
     data(){
@@ -9,6 +9,7 @@ export default {
     render() {
         return (
             <div>
+                <Slots />
                 <Slots>
                     {this.string}
                 </Slots>

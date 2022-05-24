@@ -10,7 +10,7 @@ describe('getCelcius', () => {
 
 describe('currentTime', () => {
     it('Ska visa dagens datum', () => {
-        expect(currentTime()).to.deep.equal('20/5/2022')
+        expect(currentTime()).to.deep.equal('24/5/2022')
 
     })
 })

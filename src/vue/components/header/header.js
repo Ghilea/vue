@@ -2,6 +2,7 @@ import { store } from "@comp/store";
 import Weather from "@comp/header/weather";
 import DateTime from "@comp/header/dateTime";
 import Cards from '@comp/header/cards';
+import Slots from "../slots/slots";
 
 export default {
     data() {
@@ -23,6 +24,7 @@ export default {
                 <Cards />
                 <DateTime />
                 <Weather />
+                <Slots />
             </header>
         )
        
