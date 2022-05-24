@@ -8,8 +8,11 @@ import Booking from '@comp/booking/booking';
 const rootPublic = '/vue'
 const rootDev = '/vue/public'
 
+//Routes - aka links for vue
 const router = createRouter({
-    history: createWebHistory(rootDev),
+    //History - can backtrack were you have been
+    history: createWebHistory(rootPublic),
+    //Links with path, name of the link and which component to be loaded
     routes: [
         {
             path: '/',
