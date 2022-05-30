@@ -24,11 +24,20 @@ export default {
             const roomType = document.querySelector('.roomType option:checked');
             console.log(roomType.value);
             if (roomType.value == '1') {
-                store.state.singleCabin -= 1;
+               if (store.state.singleCabin >0 ){store.state.singleCabin -= 1} 
+               else {
+                alert(' Fullbokat finns inga lediga rum. ')
+            }
             } else if (roomType.value == '2') {
-                store.state.doubleCabin -= 1;
+                if (store.state.doubleCabin >0 ){store.state.doubleCabin -= 1}
+                else {
+                    alert(' Fullbokat finns inga lediga rum. ')
+                }
             } else if (roomType.value == '3') {
-                store.state.suite -= 1;
+                if(store.state.suite >0 ){store.state.suite -= 1}
+                else {
+                    alert(' Fullbokat finns inga lediga rum. ')
+                }
             }
 
             store.state.roomBooking.push(date.value, leave.value);
